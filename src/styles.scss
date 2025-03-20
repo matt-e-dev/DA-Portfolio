@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to /* Apply global styles */
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for colors */
+:root {
+    --primary-color: #3DCFB6;
+    --secondary-color: #2ecc71;
+    --background-color: #2c2c2c;
+    --text-color: #ecf0f1;
+    --accent-color: #e74c3c;
+}
+
+/* Define CSS variables for font sizes */
+:root {
+    --font-size-small: 0.875rem; /* 14px */
+    --font-size-text: 1rem; /* 16px */
+    --font-size-buttons: 1.25rem; /* 20px */
+    --font-size-navbar: 1.5rem; /* 24px */
+    --font-size-h2-above: 1.5rem; /* 24px */
+    --font-size-h2: 4rem; /* 64px */
+    --font-size-h1: 8rem; /* 64px */
+}
+

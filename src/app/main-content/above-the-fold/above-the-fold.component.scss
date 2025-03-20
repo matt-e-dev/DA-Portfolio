@@ -1,0 +1,30 @@
+.above-the-fold-wrapper {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.above-the-fold {
+
+    max-width: 1920px;
+    width: 100%;
+
+    .header-text {
+        h2 {
+            font-size: var(--font-size-h2);
+        }
+
+        h1 {
+            font-size: var(--font-size-h1);
+        }
+    }
+
+    .header-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+}

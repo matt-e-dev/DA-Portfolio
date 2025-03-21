@@ -1,0 +1,35 @@
+.contact-wrapper {
+
+    display: flex;
+    justify-content: center;
+    height:100vh;
+}
+
+.contact-content {
+
+    max-width:1920px;
+    width:100%;
+    margin: 0px 96px;
+    color:var(--text-color);
+    display: flex;
+
+    >.text-container {
+
+        max-width:560px;
+        width:100%;
+    }
+
+    >.contact-container {
+
+        max-width:560px;
+        width:100%;
+
+        >.name-container,
+        .email-container,
+        .help-container {
+
+            border:2px solid var(--primary-color);
+        }
+
+    }
+}

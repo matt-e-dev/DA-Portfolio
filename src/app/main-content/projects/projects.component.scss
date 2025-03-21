@@ -1,0 +1,35 @@
+.projects-wrapper {
+
+    display: flex;
+    justify-content: center;
+    height:100vh;
+}
+
+.projects-content {
+
+    max-width:1920px;
+    width:100%;
+    margin: 0px 96px;
+    color:var(--text-color);
+   
+.projects {
+
+    max-width:880px;
+    width:100%;
+
+    >.join,
+    .el-pollo-loco {
+
+        border-top: 2px solid var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        height:104px;
+        display: flex;
+        align-items: center;
+        gap:440px;
+    }
+
+
+}
+
+
+}

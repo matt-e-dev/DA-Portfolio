@@ -1,0 +1,42 @@
+
+
+.skills-wrapper {
+
+    display: flex;
+    justify-content: center;
+    height:100vh;
+}
+
+.skills-content {
+
+    max-width:1920px;
+    width:100%;
+    margin: 0px 96px;
+    display: flex;
+    justify-content: space-around;
+
+    >.text-container {
+
+        height:520px;
+        max-width:520px;
+        width:100%;
+        border:2px solid var(--primary-color);
+        border-radius:16px;
+        color:var(--text-color);
+        
+    }
+
+    >.picture-container {
+
+        height:560px;
+        max-width:640px;
+        width:100%;
+        border:2px solid red;
+        border-radius:16px;
+    }
+
+
+    
+
+
+}

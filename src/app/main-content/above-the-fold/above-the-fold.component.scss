@@ -2,6 +2,8 @@
     color: var(--text-color);
     height: 100vh;
     margin: 0px 96px;
+    display: flex;
+    justify-content: center;
 }
 
 .above-the-fold-content {
@@ -10,6 +12,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    height:100vh;
+    
     
 
     .header-text {
@@ -18,6 +22,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom:176px;
+        
         
         h2 {
             font-size: var(--font-size-h2);
@@ -25,6 +31,8 @@
 
         h1 {
             font-size: var(--font-size-h1);
+            margin-top:0;
+         
         }
 
         >.header-buttons {
@@ -38,15 +46,46 @@
 
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap:24px;
-        align-items: flex-end;
+        padding-top:360px;
+       
 
         p {
             writing-mode: vertical-rl; 
             text-orientation: mixed; 
             transform: rotate(180deg); 
-            font-size: var(--font-size-text);
+            font-size: var(--font-size-text-large);
         }
+
+        >.deco-line-right {
+
+            width: 2px;
+            height: 180px;
+            background-color: var(--text-color);
+        }
+    }
+
+    .left-side-content-above-the-fold {
+
+        padding-top:560px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+
+    
+
+        >.deco-line-left {
+
+            width: 2px;
+            height: 240px;
+            background-color: var(--primary-color);
+
+        }
+
     }
 
   

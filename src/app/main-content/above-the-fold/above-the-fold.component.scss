@@ -1,18 +1,24 @@
 .above-the-fold-wrapper {
     color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     height: 100vh;
+    margin: 0px 96px;
 }
 
-.above-the-fold {
+.above-the-fold-content {
 
     max-width: 1920px;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
 
     .header-text {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
         h2 {
             font-size: var(--font-size-h2);
         }
@@ -20,11 +26,28 @@
         h1 {
             font-size: var(--font-size-h1);
         }
+
+        >.header-buttons {
+            display: flex;
+            gap: 24px;
+        }
+
     }
 
-    .header-buttons {
+    .right-side-content-above-the-fold {
+
         display: flex;
-        justify-content: center;
-        gap: 24px;
+        flex-direction: column;
+        gap:24px;
+        align-items: flex-end;
+
+        p {
+            writing-mode: vertical-rl; 
+            text-orientation: mixed; 
+            transform: rotate(180deg); 
+            font-size: var(--font-size-text);
+        }
     }
+
+  
 }

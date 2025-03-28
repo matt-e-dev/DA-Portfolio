@@ -1,9 +1,10 @@
 .above-the-fold-wrapper {
     color: var(--text-color);
     height: 100vh;
-    margin: 0px 96px;
+    padding: 0px 96px;
     display: flex;
     justify-content: center;
+    background: linear-gradient(120deg, #003d3d 0%, #0f0f0f 60%);
 }
 
 .above-the-fold-content {

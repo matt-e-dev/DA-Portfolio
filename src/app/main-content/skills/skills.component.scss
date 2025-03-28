@@ -16,16 +16,29 @@
     justify-content: space-between;
     margin: 0px 96px;
 
-    >.text-container {
+    .text-container-wrapper {
 
-        height:520px;
-        max-width:520px;
-        width:100%;
-        border:2px solid var(--primary-color);
-        border-radius:16px;
-        color:var(--text-color);
+        .p-above-text-container {
+
+            font-size: var(--font-size-text);
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        >.text-container {
+
+            height:520px;
+            max-width:520px;
+            width:100%;
+            border:2px solid var(--primary-color);
+            border-radius:16px;
+            color:var(--text-color);
+            
+        }
+
         
     }
+
 
     >.picture-container {
 

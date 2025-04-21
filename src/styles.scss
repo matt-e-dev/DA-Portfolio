@@ -1,8 +1,14 @@
 /* You can add global styles to /* Apply global styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--background-color);
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 /* Define CSS variables for colors */

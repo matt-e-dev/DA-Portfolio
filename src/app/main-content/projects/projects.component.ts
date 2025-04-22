@@ -9,4 +9,17 @@ import { Component } from '@angular/core';
 })
 export class ProjectsComponent {
 
+  toggleJoin(): void {
+    const element = document.getElementById('join')?.querySelector('img');
+    if (element) {
+      element.classList.toggle('d-none');
+    }
+  }
+
+  toggleElPolloLoco(): void {
+    const element = document.getElementById('elPolloLoco')?.querySelector('img');
+    if (element) {
+      element.classList.toggle('d-none');
+    }
+  }
 }

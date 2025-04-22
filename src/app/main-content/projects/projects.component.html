@@ -8,19 +8,19 @@
 
         <div class="projects">
 
-            <div class="join">
-
+            <div class="join" id="join" (mouseenter)="toggleJoin()" (mouseleave)="toggleJoin()">
                 <h4>JOIN</h4>
                 <p>Angular | TypeScript | HTML | CSS | Firebase</p>
-
+                <img class="d-none" src="assets/imgs/test1.png" alt="">
             </div>
 
-            <div class="el-pollo-loco">
-
+            <div class="el-pollo-loco" id="elPolloLoco" (mouseenter)="toggleElPolloLoco()" (mouseleave)="toggleElPolloLoco()">
                 <h4>El Pollo Loco</h4>
-                <p>JavaScript| HTML | CSS</p>
+                <p>JavaScript | HTML | CSS</p>
+                <img class="d-none" src="assets/imgs/test1.png" alt="">
                 
             </div>
+
         </div>
     </div>
 </div>

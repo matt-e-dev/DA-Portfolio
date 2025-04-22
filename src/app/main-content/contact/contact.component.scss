@@ -12,6 +12,7 @@
     margin: 0px 96px;
     color:var(--text-color);
     display: flex;
+    justify-content: space-between;
 
     >.text-container {
 
@@ -24,12 +25,20 @@
         max-width:560px;
         width:100%;
 
+        >.help-container {
+
+            border-bottom:1px solid var(--primary-color);
+            padding-bottom:24px;
+        }
+
         >.name-container,
         .email-container,
-        .help-container {
+        .help-container
+         {
 
             border-top:2px solid var(--primary-color);
-            border-bottom:2px solid var(--primary-color);
+            margin-bottom:48px;
+            padding-left:48px;
 
         >.contact-secondary-headlines {
             font-size:var(--font-size-navbar);
@@ -38,9 +47,29 @@
         }
 
         }
+        input {
+            all: unset;
+        }
 
-      
+        input::placeholder {
+
+            color:white;
+        }
     
+        .checkbox-container {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hello-container {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
     }
 
    

@@ -28,8 +28,23 @@
         .email-container,
         .help-container {
 
-            border:2px solid var(--primary-color);
+            border-top:2px solid var(--primary-color);
+            border-bottom:2px solid var(--primary-color);
+
+        >.contact-secondary-headlines {
+            font-size:var(--font-size-navbar);
+            color:var(--primary-color);
+            
         }
 
+        }
+
+      
+    
     }
+
+   
 }
+
+
+

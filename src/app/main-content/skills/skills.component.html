@@ -19,8 +19,20 @@
         </div>
 
         <div class="picture-container">
-            <div class="skills-icons">
-                <div *ngFor="let skill of skills" class="skills">
+            <div class="skills-row">
+                <div *ngFor="let skill of skills.slice(0, 4)" class="skills">
+                    <img [src]="skill.icon" [alt]="skill.name" />
+                    <p>{{ skill.name }}</p>
+                </div>
+            </div>
+            <div class="skills-row">
+                <div *ngFor="let skill of skills.slice(4, 8)" class="skills">
+                    <img [src]="skill.icon" [alt]="skill.name" />
+                    <p>{{ skill.name }}</p>
+                </div>
+            </div>
+            <div class="skills-row">
+                <div *ngFor="let skill of skills.slice(8)" class="skills">
                     <img [src]="skill.icon" [alt]="skill.name" />
                     <p>{{ skill.name }}</p>
                 </div>

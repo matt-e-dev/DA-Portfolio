@@ -17,11 +17,20 @@
         </div>
 
         <div class="overlay" *ngIf="isOverlayOpen">
-            <div class="overlay-content">
-                <h3>{{ selectedProject?.title }}</h3>
-                <p>{{ selectedProject?.description }}</p>
-                <p><strong>Technologies:</strong> {{ selectedProject?.technologies }}</p>
-                <button (click)="closeOverlay()">Close</button>
+            <div class="overlay-content" *ngIf="selectedProject">
+                <div class="description-side-overlay">
+                <h2>{{ selectedProject.count }}</h2>
+                <h3>{{ selectedProject.title }}</h3>
+                <h3>{{ selectedProject.question }}</h3>
+                <p>{{ selectedProject.description }}</p>
+                <p><strong>Technologies:</strong> {{ selectedProject.technologies }}</p>
+            </div>
+            <div class="img-side-overlay">
+                <button (click)="closeOverlay()">X</button>
+                <img [src]="selectedProject.image" [alt]="selectedProject.title">
+            </div>
+               
+               
             </div>
         </div>
 

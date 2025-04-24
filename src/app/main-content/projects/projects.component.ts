@@ -25,9 +25,12 @@ export class ProjectsComponent {
   }
 
   isOverlayOpen = false; 
+  
   selectedProject: { 
     id: string;
+    count: string;
     title: string;
+    question: string;
     description: string;
     technologies: string;
     image: string;
@@ -37,14 +40,18 @@ export class ProjectsComponent {
   projects = [
     {
       id: 'join',
+      count:'01',
       title: 'JOIN',
+      question: 'What is the project about?',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
       image: 'assets/imgs/test1.png'
     },
     {
       id: 'elPolloLoco',
+      count:'02',
       title: 'El Pollo Loco',
+      question: 'What is the project about?',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       technologies: 'JavaScript | HTML | CSS',
       image: 'assets/imgs/test1.png'

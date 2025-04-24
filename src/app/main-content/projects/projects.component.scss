@@ -34,7 +34,7 @@
 
 
 .overlay {
-    position: absolute; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -55,6 +55,40 @@
     max-width: 1200px;
     width: 100%;
     display:flex;
+
+    >.img-side-overlay{
+
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+       gap:80px;
+    }
+
+    .close-btn {
+        width: 24px;
+        height: 24px;
+        font-size: var(--font-size-text-xlarge);
+        text-decoration: none;
+        background: none;
+        border: none; 
+        cursor: pointer; 
+        padding-right:24px;
+    }
+
+    .next-project-btn {
+
+        color: var(--primary-color);
+        font-size: var(--font-size-text-large);
+        cursor: pointer; 
+        text-decoration: none;
+        background: none;
+        border: none; 
+    }
+
+    .close-btn:hover {
+        color: var(--primary-color);
+        transform: scale(1.3);
+    }
 }
 
 

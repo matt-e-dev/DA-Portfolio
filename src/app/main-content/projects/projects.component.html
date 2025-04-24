@@ -26,8 +26,9 @@
                 <p><strong>Technologies:</strong> {{ selectedProject.technologies }}</p>
             </div>
             <div class="img-side-overlay">
-                <button (click)="closeOverlay()">X</button>
+                <button class="close-btn" (click)="closeOverlay()">X</button>
                 <img [src]="selectedProject.image" [alt]="selectedProject.title">
+                <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
             </div>
                
                

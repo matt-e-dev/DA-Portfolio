@@ -8,7 +8,7 @@
 
         <div class="projects">
 
-            <div class="join" id="join" (mouseenter)="toggleJoin()" (mouseleave)="toggleJoin()">
+            <div class="join" id="join" (mouseenter)="toggleJoin()" (mouseleave)="toggleJoin()" (click)="openOverlay('JOIN')">
                 <h4>JOIN</h4>
                 <p>Angular | TypeScript | HTML | CSS | Firebase</p>
                 <img class="d-none" src="assets/imgs/test1.png" alt="">
@@ -22,5 +22,15 @@
             </div>
 
         </div>
+
+        <div class="overlay" *ngIf="isOverlayOpen">
+            <div class="overlay-content">
+                <h3>{{ selectedProject }}</h3>
+                <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories..</p>
+                <button (click)="closeOverlay()">X</button>
+            </div>
+        </div>
+
+
     </div>
 </div>

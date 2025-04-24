@@ -1,8 +1,8 @@
 .projects-wrapper {
-
+    position: relative; 
     display: flex;
     justify-content: center;
-    height:100vh;
+    height: 100vh;
 }
 
 .projects-content {
@@ -27,8 +27,6 @@
         align-items: center;
         gap:440px;
     }
-
-
 }
 
 }
@@ -41,6 +39,30 @@
 .el-pollo-loco:hover {
 
     background-color: var(--primary-color);
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    color: white;
+}
+
+.overlay-content {
+    text-align: center;
+    background-color: #222; 
+    padding: 32px;
+    border-radius: 8px;
+    height:60vh;
+    max-width: 1200px;
+    width: 100%;
 }
 
 

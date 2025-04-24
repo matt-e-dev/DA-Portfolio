@@ -12,34 +12,26 @@
     margin: 0px 96px;
     color:var(--text-color);
    
-.projects {
+.project-card {
 
     max-width:880px;
     width:100%;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    height:104px;
+    display: flex;
+    align-items: center;
+    gap:440px;
 
-    >.join,
-    .el-pollo-loco {
-
-        border-top: 2px solid var(--primary-color);
-        border-bottom: 2px solid var(--primary-color);
-        height:104px;
-        display: flex;
-        align-items: center;
-        gap:440px;
-    }
 }
 
 }
 
-.join:hover {
+.project-card :hover {
 
     background-color: var(--primary-color);
 }
 
-.el-pollo-loco:hover {
-
-    background-color: var(--primary-color);
-}
 
 .overlay {
     position: absolute; 

@@ -24,16 +24,40 @@ export class ProjectsComponent {
     }
   }
 
-  isOverlayOpen = false;
-  selectedProject = '';
+  isOverlayOpen = false; 
+  selectedProject: { 
+    id: string;
+    title: string;
+    description: string;
+    technologies: string;
+    image: string;
+  } | null = null; 
 
-  openOverlay(projectName: string): void {
+
+  projects = [
+    {
+      id: 'join',
+      title: 'JOIN',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
+      image: 'assets/imgs/test1.png'
+    },
+    {
+      id: 'elPolloLoco',
+      title: 'El Pollo Loco',
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      technologies: 'JavaScript | HTML | CSS',
+      image: 'assets/imgs/test1.png'
+    }
+  ];
+
+  openOverlay(projectId: string): void {
+    this.selectedProject = this.projects.find(project => project.id === projectId) || null;
     this.isOverlayOpen = true;
-    this.selectedProject = projectName;
   }
 
   closeOverlay(): void {
     this.isOverlayOpen = false;
-    this.selectedProject = '';
+    this.selectedProject = null;
   }
 }

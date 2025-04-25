@@ -18,11 +18,11 @@
 
         <div class="overlay" *ngIf="isOverlayOpen">
             <div class="overlay-content" *ngIf="selectedProject">
-                <div class="description-side-overlay">
-                <h2>{{ selectedProject.count }}</h2>
-                <h3>{{ selectedProject.title }}</h3>
-                <h3>{{ selectedProject.question }}</h3>
-                <p>{{ selectedProject.description }}</p>
+            <div class="description-side-overlay">
+                <h2 class="count">{{ selectedProject.count }}</h2>
+                <h3 class="title">{{ selectedProject.title }}</h3>
+                <h4 class="question">{{ selectedProject.question }}</h4>
+                <p class="description">{{ selectedProject.description }}</p>
                 <p><strong>Technologies:</strong> {{ selectedProject.technologies }}</p>
             </div>
             <div class="img-side-overlay">

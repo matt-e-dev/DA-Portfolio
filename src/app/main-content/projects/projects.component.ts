@@ -60,13 +60,11 @@ export class ProjectsComponent {
 
   nextProject(): void {
     if (this.selectedProject) {
-      // Find the index of the current project
+     
       const currentIndex = this.projects.findIndex(project => project.id === this.selectedProject?.id);
   
-      // Calculate the index of the next project (loop back to the first project if at the end)
       const nextIndex = (currentIndex + 1) % this.projects.length;
   
-      // Set the next project as the selected project
       this.selectedProject = this.projects[nextIndex];
     }
   }
@@ -75,7 +73,6 @@ export class ProjectsComponent {
     this.selectedProject = this.projects.find(project => project.id === projectId) || null;
     this.isOverlayOpen = true;
   
-    // Disable scrolling on the body
     document.body.classList.add('no-scroll');
   }
   
@@ -83,7 +80,6 @@ export class ProjectsComponent {
     this.isOverlayOpen = false;
     this.selectedProject = null;
   
-    // Re-enable scrolling on the body
     document.body.classList.remove('no-scroll');
   }
 }

@@ -89,5 +89,49 @@
 
     }
 
+    .slider{
+        background-color:rgba(255, 255, 255, 0.089);
+        position:absolute;
+        bottom:80px;
+        height:60px;
+        width:100%;
+        max-width:1920px;
+        transform: rotate(-5deg);
+        overflow: hidden;
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0%); 
+            }
+            100% {
+                transform: translateX(-50%); 
+            }
+          }
+
+        .slider-content{
+          display: flex; 
+          align-items: center;
+          height:100%;
+          width:100%;
+          animation: slide 5s linear infinite;
+
+            p {
+            color:var(--primary-color);
+            font-size:32px;
+            font-weight:400;
+            white-space: nowrap; 
+            padding: 0 24px;
+            }
+
+            .slider-devider-dots{
+                font-weight:600;
+              }
+        
+        }
+       
+      }
+
+
+
   
 }

@@ -22,6 +22,7 @@ export class SkillsComponent {
     { name: 'GIT', icon: 'assets/icons/git.png' },
     { name: 'Rest-API', icon: 'assets/icons/rest-api.png' },
     { name: 'Scrum', icon: 'assets/icons/scrum.png' },
+    { name: 'Linux', icon: 'assets/icons/linux.png' },
     { name: 'Growth mindset', icon: 'assets/icons/growth-mindset.png' }
   ];
 

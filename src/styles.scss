@@ -34,6 +34,17 @@ body {
     --font-size-h1: 8rem; /* 128px */
 }
 
+:root {
+    --button-text-color: var(--text-color); 
+    --button-border-color: var(--text-color); 
+    --button-background-color: transparent; 
+    --button-hover-background-color: var(--primary-color); 
+    --button-hover-text-color: var(--background-color); 
+    --button-padding: 16px 32px; 
+    --button-border-radius: 24px; 
+    --button-font-size: var(--font-size-buttons); 
+    --button-transition: 0.3s ease; 
+}
 .d-none {
     display: none;
 }

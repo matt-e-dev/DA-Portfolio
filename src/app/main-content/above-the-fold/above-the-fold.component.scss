@@ -4,7 +4,7 @@
     padding: 0px 96px;
     display: flex;
     justify-content: center;
-    background: linear-gradient(120deg, #003d3d 0%, #0f0f0f 60%);
+    background: linear-gradient(100deg, #1C1C1C, #08463B);
 }
 
 .above-the-fold-content {
@@ -36,9 +36,25 @@
          
         }
 
-        >.header-buttons {
+        .header-buttons {
+
             display: flex;
-            gap: 24px;
+            gap:24px;
+
+            button {
+                color: var(--button-text-color);
+                border: 1px solid var(--button-border-color);
+                background-color: var(--button-background-color);
+                padding: var(--button-padding);
+                border-radius: var(--button-border-radius);
+                font-size: var(--button-font-size);
+                cursor: pointer;
+               
+                &:hover {
+                    background-color: var(--button-hover-background-color);
+                    color: var(--button-hover-text-color);
+                }
+            }
         }
 
     }
@@ -128,7 +144,6 @@
               }
         
         }
-       
       }
 
 

@@ -8,39 +8,53 @@
 
         <div class="projects">
 
-            <div *ngFor="let project of projects" class="project-card" (click)="openOverlay(project.id)">
-                <h4>{{ project.title }}</h4>
-                <p>{{ project.technologies }}</p>
-                <img class="d-none" [src]="project.image" [alt]="project.title">
-            </div>
+            <div class="left-side-projects-wrapper">
 
-        </div>
-
-        <div class="overlay" *ngIf="isOverlayOpen">
-            <div class="overlay-content" *ngIf="selectedProject">
-            <div class="description-side-overlay">
-                <h2 class="count">{{ selectedProject.count }}</h2>
-                <h3 class="title">{{ selectedProject.title }}</h3>
-                <h4 class="question">{{ selectedProject.question }}</h4>
-                <p class="description">{{ selectedProject.description }}</p>
-                <p>{{ selectedProject.technologies }}</p>
-                <div class="links">
-                    <a href="">Github</a>
-                    <a href="">Live test</a>
-                </div>
                 
-            </div>
-            <div class="img-side-overlay">
-                <button class="close-btn" (click)="closeOverlay()">X</button>
-                <img [src]="selectedProject.image" [alt]="selectedProject.title">
-                <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
+
+                    <div *ngFor="let project of projects" class="project-card" (click)="openOverlay(project.id)">
+                        <h4>{{ project.title }}</h4>
+                        <p>{{ project.technologies }}</p>
+                        <img class="d-none" [src]="project.image" [alt]="project.title">
+                    </div>
+
+                </div>
+
+                <div class="overlay" *ngIf="isOverlayOpen">
+                    <div class="overlay-content" *ngIf="selectedProject">
+                        <div class="description-side-overlay">
+                            <h2 class="count">{{ selectedProject.count }}</h2>
+                            <h3 class="title">{{ selectedProject.title }}</h3>
+                            <h4 class="question">{{ selectedProject.question }}</h4>
+                            <p class="description">{{ selectedProject.description }}</p>
+                            <p>{{ selectedProject.technologies }}</p>
+                            <div class="links">
+                                <a href="">Github</a>
+                                <a href="">Live test</a>
+                            </div>
+                            
+                        </div>
+                        <div class="img-side-overlay">
+                            <button class="close-btn" (click)="closeOverlay()">X</button>
+                            <img [src]="selectedProject.image" [alt]="selectedProject.title">
+                            <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
+                        </div>
+                      </div>
+
+                    
+                    
+                    
+                    
+
             </div>
 
             
-               
-               
-            </div>
         </div>
 
-    </div>
+                
+
+
+            
+
+           </div>
 </div>

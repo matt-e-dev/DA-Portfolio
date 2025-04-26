@@ -21,17 +21,16 @@
     height:104px;
     display: flex;
     align-items: center;
-    gap:440px;
+    justify-content: space-between;;
 
+    &:hover  {
+
+        background-color: var(--primary-color);
+       
+    }
 }
 
 }
-
-.project-card :hover {
-
-    background-color: var(--primary-color);
-}
-
 
 .overlay {
     position: fixed;

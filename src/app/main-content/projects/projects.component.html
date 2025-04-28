@@ -4,55 +4,50 @@
 
         <h3 class="container-headers --primary-color">Portfolio</h3>
         <h2 class="container-headers-inside --primary-color">Featured Projects</h2>
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        <p class="container-text ">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
 
         <div class="projects">
 
             <div class="left-side-projects-wrapper">
-
-                    <div *ngFor="let project of projects" class="project-card" (click)="openOverlay(project.id)">
-                        <p class="container-text-large" >{{ project.title }}</p>
-                        <p>{{ project.technologies }}</p>
-                        <img class="d-none" [src]="project.image" [alt]="project.title">
-                    </div>
-
+                <div 
+                    *ngFor="let project of projects" 
+                    class="project-card" 
+                    (click)="openOverlay(project.id)" 
+                    (mouseover)="toggleImage(project.id, true)" 
+                    (mouseleave)="toggleImage(project.id, false)">
+                    
+                    <p class="container-text-large">{{ project.title }}</p>
+                    <p class="container-text">{{ project.technologies }}</p>
+                    <img class="d-none" [id]="project.id" [src]="project.image" [alt]="project.title">
                 </div>
+            </div>
+            
 
-                <div class="overlay" *ngIf="isOverlayOpen">
-                    <div class="overlay-content" *ngIf="selectedProject">
-                        <div class="description-side-overlay">
-                            <h2 class="count">{{ selectedProject.count }}</h2>
-                            <h3 class="title">{{ selectedProject.title }}</h3>
-                            <h4 class="question">{{ selectedProject.question }}</h4>
-                            <p class="description">{{ selectedProject.description }}</p>
-                            <p>{{ selectedProject.technologies }}</p>
-                            <div class="links">
-                                <a href="">Github</a>
-                                <a href="">Live test</a>
-                            </div>
-                            
+          
+            <div class="overlay" *ngIf="isOverlayOpen">
+                <div class="overlay-content" *ngIf="selectedProject">
+                    <div class="description-side-overlay">
+                        <h2 class="count ">{{ selectedProject.count }}</h2>
+                        <h3 class="title">{{ selectedProject.title }}</h3>
+                        <h4 class="question">{{ selectedProject.question }}</h4>
+                        <p class="description">{{ selectedProject.description }}</p>
+                        <p>{{ selectedProject.technologies }}</p>
+                        <div class="links">
+                            <a href="">Github</a>
+                            <a href="">Live test</a>
                         </div>
-                        <div class="img-side-overlay">
-                            <button class="close-btn" (click)="closeOverlay()">X</button>
-                            <img [src]="selectedProject.image" [alt]="selectedProject.title">
-                            <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
-                        </div>
-                      </div>
-
-                    
-                    
-                    
-                    
+                        
+                    </div>
+                    <div class="img-side-overlay">
+                        <button class="close-btn" (click)="closeOverlay()">X</button>
+                        <img [src]="selectedProject.image" [alt]="selectedProject.title">
+                        <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
+                    </div>
+                  </div>
 
             </div>
 
-            
         </div>
 
-                
-
-
-            
-
-           </div>
+    </div>
 </div>

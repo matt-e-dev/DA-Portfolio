@@ -10,17 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectsComponent {
 
-  toggleJoin(): void {
-    const element = document.getElementById('join')?.querySelector('img');
+  toggleImage(projectId: string, show: boolean): void {
+    const element = document.getElementById(projectId);
     if (element) {
-      element.classList.toggle('d-none');
-    }
-  }
-
-  toggleElPolloLoco(): void {
-    const element = document.getElementById('elPolloLoco')?.querySelector('img');
-    if (element) {
-      element.classList.toggle('d-none');
+      if (show) {
+        element.classList.remove('d-none'); 
+        element.classList.add('d-none'); 
+      }
     }
   }
 

@@ -15,6 +15,7 @@ export class ProjectsComponent {
     if (element) {
       if (show) {
         element.classList.remove('d-none'); 
+      } else {
         element.classList.add('d-none'); 
       }
     }

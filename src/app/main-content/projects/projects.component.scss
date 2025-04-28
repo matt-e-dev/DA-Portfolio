@@ -13,23 +13,40 @@
     margin: 0px 96px;
     color:var(--text-color);
    
-.project-card {
+    .project-card {
+        display: flex;
+        justify-content: space-between;
+        
+        
 
-    max-width:880px;
-    width:100%;
-    border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    height:104px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;;
+        .project-card-text {
+            max-width:880px;
+            width:100%;
+            border-top: 2px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            height:104px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;;
+        
+            &:hover  {
+        
+                background-color: var(--primary-color);
+            }
+        
+        }
 
-    &:hover  {
+        img {
 
-        background-color: var(--primary-color);
-       
+            width:280px;
+            height:200px;
+            
+        }
+
+        
+
+        
     }
-}
 
 }
 .overlay {

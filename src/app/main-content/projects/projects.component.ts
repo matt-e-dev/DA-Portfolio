@@ -46,11 +46,11 @@ export class ProjectsComponent {
       image: 'assets/imgs/test1.png',
       icon: 'assets/icons/join-icon.svg',
       skills: [
-        { name: 'Angular', icon: 'assets/icons/angular.png' },
-        { name: 'TypeScript', icon: 'assets/icons/typescript.png' },
-        { name: 'HTML', icon: 'assets/icons/html.png' },
-        { name: 'CSS', icon: 'assets/icons/css.png' },
-        { name: 'Firebase', icon: 'assets/icons/firebase.png' }
+        { name: 'Angular', icon: 'assets/icons/projects/angular.svg' },
+        { name: 'TypeScript', icon: 'assets/icons/projects/typescript.svg' },
+        { name: 'HTML', icon: 'assets/icons/projects/html.svg' },
+        { name: 'CSS', icon: 'assets/icons/projects/css.svg' },
+        { name: 'Firebase', icon: 'assets/icons/projects/firebase.svg' }
       ]
     },
     {
@@ -63,9 +63,9 @@ export class ProjectsComponent {
       image: 'assets/imgs/test1.png',
       icon: 'assets/icons/el-pollo-loco-icon.svg',
       skills: [
-        { name: 'JavaScript', icon: 'assets/icons/javascript.png' },
-        { name: 'HTML', icon: 'assets/icons/html.png' },
-        { name: 'CSS', icon: 'assets/icons/css.png' }
+        { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
+        { name: 'HTML', icon: 'assets/icons/projects/html.png' },
+        { name: 'CSS', icon: 'assets/icons/projects/css.png' }
       ]
     }
   ];

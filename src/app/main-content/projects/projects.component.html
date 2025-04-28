@@ -37,9 +37,9 @@
                             <h4 class="question">{{ selectedProject.question }}</h4>
                             <p class="description container-text">{{ selectedProject.description }}</p>
                             <div class="skills-section">
-                                <div class="skills-list container-text-small ">
+                                <div class="skills-list container-text-small">
                                     <div *ngFor="let skill of selectedProject.skills" class="project-skills">
-                                        <img class="--primary-color" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                                        <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
                                         <span>{{ skill.name }}</span>
                                     </div>
                                 </div>

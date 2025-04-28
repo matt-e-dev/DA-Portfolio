@@ -10,10 +10,8 @@
 
             <div class="left-side-projects-wrapper">
 
-                
-
                     <div *ngFor="let project of projects" class="project-card" (click)="openOverlay(project.id)">
-                        <h4>{{ project.title }}</h4>
+                        <p class="container-text-large" >{{ project.title }}</p>
                         <p>{{ project.technologies }}</p>
                         <img class="d-none" [src]="project.image" [alt]="project.title">
                     </div>

@@ -4,7 +4,7 @@
     padding: 0px 96px;
     display: flex;
     justify-content: center;
-    background: linear-gradient(100deg, #1C1C1C, #08463B);
+   background: linear-gradient(100deg, var(--background-color-black), var(--background-color-green));
 }
 
 .above-the-fold-content {

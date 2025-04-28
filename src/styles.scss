@@ -35,6 +35,11 @@ body {
 }
 
 :root {
+
+    --font-weight-normal:700;
+}
+
+:root {
     --button-text-color: var(--text-color); 
     --button-border-color: var(--text-color); 
     --button-background-color: transparent; 
@@ -45,6 +50,13 @@ body {
     --button-font-size: var(--font-size-buttons); 
     --button-transition: 0.3s ease; 
 }
+
+.container-headers {
+    font-weight: var(--font-weight-normal);
+    font-size: var( --font-size-text-xlarge);
+    color:var(--primary-color);
+}
+
 .d-none {
     display: none;
 }

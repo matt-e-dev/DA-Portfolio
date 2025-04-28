@@ -31,27 +31,42 @@ export class ProjectsComponent {
     description: string;
     technologies: string;
     image: string;
-  } | null = null; 
+    skills: { name: string; icon: string }[]; 
+  } | null = null;
 
 
   projects = [
     {
       id: 'join',
-      count:'01',
+      count: '01',
       title: 'JOIN',
       question: 'What is the project about?',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
-      image: 'assets/imgs/test1.png'
+      image: 'assets/imgs/test1.png',
+      icon: 'assets/icons/join-icon.svg',
+      skills: [
+        { name: 'Angular', icon: 'assets/icons/angular.png' },
+        { name: 'TypeScript', icon: 'assets/icons/typescript.png' },
+        { name: 'HTML', icon: 'assets/icons/html.png' },
+        { name: 'CSS', icon: 'assets/icons/css.png' },
+        { name: 'Firebase', icon: 'assets/icons/firebase.png' }
+      ]
     },
     {
       id: 'elPolloLoco',
-      count:'02',
+      count: '02',
       title: 'El Pollo Loco',
       question: 'What is the project about?',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       technologies: 'JavaScript | HTML | CSS',
-      image: 'assets/imgs/test1.png'
+      image: 'assets/imgs/test1.png',
+      icon: 'assets/icons/el-pollo-loco-icon.svg',
+      skills: [
+        { name: 'JavaScript', icon: 'assets/icons/javascript.png' },
+        { name: 'HTML', icon: 'assets/icons/html.png' },
+        { name: 'CSS', icon: 'assets/icons/css.png' }
+      ]
     }
   ];
 

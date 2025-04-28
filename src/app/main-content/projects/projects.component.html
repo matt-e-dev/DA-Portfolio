@@ -29,28 +29,34 @@
 
 
           
-            <div class="overlay" *ngIf="isOverlayOpen">
-                <div class="overlay-content" *ngIf="selectedProject">
-                    <div class="description-side-overlay">
-                        <h2 class="count ">{{ selectedProject.count }}</h2>
-                        <h3 class="title">{{ selectedProject.title }}</h3>
-                        <h4 class="question">{{ selectedProject.question }}</h4>
-                        <p class="description">{{ selectedProject.description }}</p>
-                        <p>{{ selectedProject.technologies }}</p>
-                        <div class="links">
-                            <a href="">Github</a>
-                            <a href="">Live test</a>
+                <div class="overlay" *ngIf="isOverlayOpen">
+                    <div class="overlay-content" *ngIf="selectedProject">
+                        <div class="description-side-overlay">
+                            <h2 class="count --primary-color">{{ selectedProject.count }}</h2>
+                            <h3 class="title">{{ selectedProject.title }}</h3>
+                            <h4 class="question">{{ selectedProject.question }}</h4>
+                            <p class="description container-text">{{ selectedProject.description }}</p>
+                            <div class="skills-section">
+                                <div class="skills-list container-text-small ">
+                                    <div *ngFor="let skill of selectedProject.skills" class="project-skills">
+                                        <img class="--primary-color" [src]="skill.icon" [alt]="skill.name" class="skill-icon">
+                                        <span>{{ skill.name }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="links">
+                                <a href="">Github</a>
+                                <a href="">Live test</a>
+                            </div>
                         </div>
-                        
+                        <div class="img-side-overlay">
+                            <button class="close-btn" (click)="closeOverlay()">X</button>
+                            <img [src]="selectedProject.image" [alt]="selectedProject.title">
+                            <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
+                        </div>
                     </div>
-                    <div class="img-side-overlay">
-                        <button class="close-btn" (click)="closeOverlay()">X</button>
-                        <img [src]="selectedProject.image" [alt]="selectedProject.title">
-                        <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
-                    </div>
-                  </div>
-
-            </div>
+                </div>
 
         </div>
 

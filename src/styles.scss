@@ -99,17 +99,35 @@ a {
 
 
 .main-btns {
-    color: var(--button-text-color);
-    background-color: var(--button-background-color);
+    color: var(--text-color);
+    background-color: transparent;
     font-size: var(--font-size-text-large);
-    border: 1px solid white;
-    padding: 16px 32px; 
-    border-radius: 24px; 
+    border: 1px solid var(--primary-color);
+    padding: 16px 32px;
+    border-radius: 24px;
     cursor: pointer;
-    
+    overflow: hidden; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    a {
+        color: var(--text-color);
+
+    }
+    span {
+        display: inline-block;
+        transition: transform 3s ease-out; 
+    }
+
+    &:hover span {
+        transform: translateX(-140%); 
+    }
+
     &:hover {
-        background-color: var(--button-hover-background-color);
-        color: var(--button-hover-text-color);
+        background-color: var(--button-hover-background-color); 
+    }
+
+    &:not(:hover) span {
+        transition: transform 3s ease-out; 
     }
 }
 

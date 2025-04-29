@@ -13,16 +13,35 @@
     display: flex;
     justify-content: space-between;
     margin: 0px 96px;
+    
    
 
-        >.picture-container {
-
-            height:560px;
-            max-width:560px;
-            width:100%;
-            border:2px solid var(--primary-color);
-            border-radius:16px;
+    .left-side-container {
+        height: 560px;
+        max-width: 560px;
+        width: 100%;
+        border: 2px solid var(--primary-color);
+        border-radius: 16px;
+        position: relative;
+    
+        .picture-deco-container {
+            width: 120%; 
+            height: 120%; 
+            border-radius: 16px;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 30px, 
+                var(--primary-color) 30px,
+                var(--primary-color) 32px 
+            );
+            position: absolute;
+            top: 0;
+            left: 0;
         }
+    
+        
+    }
 
         .info-container-wrapper {
 
@@ -42,8 +61,22 @@
                 
             }
 
+            .info-container-text {
+
+                display: flex;
+                padding-bottom:20px;
+                gap:20px;
+
+                &:hover {
+
+                    color:rgb(255, 255, 255);
+                }
+            }
+
         }
 
       
 
     }
+
+

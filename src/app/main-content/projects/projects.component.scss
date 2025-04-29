@@ -28,6 +28,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;;
+            
         
             &:hover  {
         
@@ -37,12 +38,15 @@
         }
 
         img {
-
-            width:280px;
-            height:200px;
-            
+            width: 280px;
+            height: 200px;
+            overflow-x: hidden;
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        
+            &:hover {
+                transform: scale(1.1); /* Scale the image without affecting layout */
+            }
         }
- 
     }
 
 }

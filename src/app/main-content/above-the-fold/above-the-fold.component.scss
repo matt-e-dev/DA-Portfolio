@@ -52,11 +52,18 @@
         padding-top:360px;
        
 
-        p {
+        .email-sideways {
             writing-mode: vertical-rl; 
             text-orientation: mixed; 
             transform: rotate(180deg); 
             font-size: var(--font-size-text-large);
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1); 
+                color: var(--primary-color);
+
+            }
         }
 
         >.deco-line-right {
@@ -65,29 +72,55 @@
             height: 180px;
             background-color: var(--text-color);
         }
+
+        img {
+        
+            &:hover {
+                transform: scale(1.33);
+                cursor:pointer;
+            }
+
+        }
+        
+        
     }
 
     .left-side-content-above-the-fold {
-
-        padding-top:560px;
+        padding-top: 560px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap:16px;
-
+        gap: 16px;
     
-
         >.deco-line-left {
-
             width: 2px;
             height: 240px;
             background-color: var(--primary-color);
-
         }
-
+    
+        .arrow-icon {
+            width: 20px; 
+            height: 60px;
+            padding: 8px;
+            border: 2px solid var(--primary-color); 
+            border-radius: 24px; 
+    
+            line, polyline {
+                stroke: var(--text-color); 
+                animation: bounce-arrow 1.5s infinite; 
+            }
+        }
+    
+        @keyframes bounce-arrow {
+            0%, 100% {
+                transform: translateY(0); /* Start and end at the original position */
+            }
+            50% {
+                transform: translateY(5px); /* Move down by 5px */
+            }
+        }
     }
-
     .slider{
         background-color:rgba(255, 255, 255, 0.089);
         position:absolute;

@@ -1,5 +1,3 @@
-
-
 .skills-wrapper {
 
     display: flex;
@@ -27,6 +25,17 @@
             border-radius:16px;
             color:var(--text-color);
             background-color: var(--background-color-green-containers);
+            padding:24px;
+
+            .skills-contact-p {
+              
+                padding:24px 0px;   
+            }
+            
+            .extra-white-space {
+
+                margin-right:16px;
+            }
 
         }
 
@@ -34,11 +43,11 @@
 
     }
 
-    >.picture-container {
+    >.skills-icons-container {
         height: 546px;
         max-width: 640px;
         width: 100%;
-        margin-top:64px;
+        margin-top:72px;
         font-size:var(--font-size-text);
         color:var(--text-color);
 
@@ -58,11 +67,17 @@
         .skills img {
             max-width: 100%;
             height: auto;
-        }
 
-    
-    
+            &:hover {
+                transform: scale(1.3);
+                transition: transform 0.3s ease;
+            }
+        }
     }
+
+   
+
+       
 
 
     

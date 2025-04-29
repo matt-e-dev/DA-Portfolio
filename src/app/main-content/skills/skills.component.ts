@@ -26,4 +26,12 @@ export class SkillsComponent {
     { name: 'Growth mindset', icon: 'assets/icons/growth-mindset.png' }
   ];
 
+  onSkillClick(skillName: string): void {
+    if (skillName === 'Growth mindset') {
+       let overlayRef = document.getElementById('overlay');
+       overlayRef?.classList.toggle('d-none');
+
+    }
+}
+
 }

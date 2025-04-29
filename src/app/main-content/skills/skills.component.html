@@ -10,9 +10,12 @@
 
                 <h2 class="container-headers-inside --primary-color">Skill Set</h2>
                 <p class="container-text">A short introduction of your skills. Highlight your experience of using different front-end technologies and emphasize your openness to learning and adapting to new technologies. Show how important it is for you to keep up with the rapid changes in web development.</p>
-                <span class="container-text-large" >You need</span>
-                <span class="container-text-large --primary-color" > another skill?</span>
-                <p class="container-text-small">Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+                <span class="container-text-large extra-white-space" >You</span>
+                <span class="container-text-large --primary-color extra-white-space" >need</span>
+                <span class="container-text-large extra-white-space" >another</span>
+                <span class="container-text-large --primary-color extra-white-space" >skill</span>
+                <span class="container-text-large --primary-color extra-white-space" >?</span>
+                <p class="skills-contact-p container-text-small">Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
                 <button class="main-btns">
                     <span>Let's talk</span>
                 </button>
@@ -20,24 +23,29 @@
             </div>
         </div>
 
-        <div class="picture-container">
+        <div class="skills-icons-container">
             <div class="skills-row">
                 <div *ngFor="let skill of skills.slice(0, 4)" class="skills">
-                    <img [src]="skill.icon" [alt]="skill.name" />
+                    <img [src]="skill.icon" [alt]="skill.name"/>
                     <p>{{ skill.name }}</p>
                 </div>
             </div>
             <div class="skills-row">
                 <div *ngFor="let skill of skills.slice(4, 8)" class="skills">
-                    <img [src]="skill.icon" [alt]="skill.name" />
+                    <img [src]="skill.icon" [alt]="skill.name"/>
                     <p>{{ skill.name }}</p>
                 </div>
             </div>
             <div class="skills-row">
                 <div *ngFor="let skill of skills.slice(8)" class="skills">
-                    <img [src]="skill.icon" [alt]="skill.name" />
+                    <img [src]="skill.icon" [alt]="skill.name" (click)="onSkillClick(skill.name)" />
                     <p>{{ skill.name }}</p>
                 </div>
+            </div>
+            <div id="overlay" class="overlay">
+
+                <img src="assets/icons/hover-growth.png" alt="">
+                
             </div>
         </div>
     </div>

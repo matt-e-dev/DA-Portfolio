@@ -1,9 +1,15 @@
 .navbar-wrapper {
-
+    position:absolute;
+    top:0;     
+    left:0;
+    width:100%;
+    height: 40px;   
     color: var(--text-color);    
     display: flex;
     justify-content: center; 
-    background: linear-gradient(100deg, var(--background-color-black), var(--background-color-green));
+    background: transparent;
+    padding-top:40px;
+   
     
 }
 
@@ -13,18 +19,57 @@
     width:100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 100px;
 
     >nav {
 
         display: flex;
-        gap: 24px;
+        gap: 48px;
 
         a {
             color: var(--text-color);     
-            
+            position: relative;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        
+            &:hover {
+                color: var(--primary-color);
+            }
+        
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 6px;
+                height: 6px;
+                background-color: var(--primary-color);
+                border-radius: 50%;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+        
+            &:hover::after {
+                opacity: 1;
+            }
         }
+        
     }
-   
+
+    >.logo {
+        height: 140px;
+        width: 140px;
+        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); /* Smooth transition */
+    }
+
+    >.logo:hover {
+        transform: rotate(20deg); /* Tilts 30 degrees to the right on hover */
+    }
 }
+
+
+
+
 

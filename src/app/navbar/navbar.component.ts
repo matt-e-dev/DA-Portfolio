@@ -9,4 +9,20 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  handleLogoHover(): void {
+    const mouthElement = document.querySelector('.mouth');
+    const handElement = document.querySelector('.hand-logo');
+
+    mouthElement?.classList.remove('d-none');
+    handElement?.classList.remove('d-none');
+  }
+
+  handleLogoMouseLeave(): void {
+    const mouthElement = document.querySelector('.mouth');
+    const handElement = document.querySelector('.hand-logo');
+
+    mouthElement?.classList.add('d-none');
+    handElement?.classList.add('d-none');
+  }
+
 }

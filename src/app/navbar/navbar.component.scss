@@ -58,15 +58,81 @@
         
     }
 
-    >.logo {
-        height: 140px;
-        width: 140px;
-        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); /* Smooth transition */
+    .logo-wrapper {
+
+        display: flex;
+        margin-top:100px;
+        width:200px;
+        height:160px;
+
+        .hand-logo-wrapper {
+
+            width:160px;
+            height:80px;
+          
+            
+           img {
+                height: 80px;
+                width: 80px;
+                animation: wave 1.5s infinite ease-in-out; /* Apply the waving animation */
+                transform-origin: bottom center; /* Set the pivot point for the wave */
+            }
+            
+            @keyframes wave {
+                0% {
+                    transform: rotate(0deg); /* Start at the neutral position */
+                }
+                25% {
+                    transform: rotate(-15deg); /* Rotate slightly to the left */
+                }
+                50% {
+                    transform: rotate(0deg); /* Return to the neutral position */
+                }
+                75% {
+                    transform: rotate(15deg); /* Rotate slightly to the right */
+                }
+                100% {
+                    transform: rotate(0deg); /* Return to the neutral position */
+                }
+            }
+        }
+
+       
     }
 
-    >.logo:hover {
-        transform: rotate(20deg); /* Tilts 30 degrees to the right on hover */
+        .logo-and-mouth {
+
+            display: flex;
+            flex-direction: column;
+            width:200px;
+           
+            
+
+            >.logo img {
+                height: 120px;
+                width: 120px;
+                transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); 
+            }
+        
+            >.logo:hover {
+                transform: rotate(20deg); 
+            }
+
+            .mouth {
+               
+                transform: rotate(90deg); 
+                font-size:48px;
+                margin-top:-8px;
+            }
+
+          
+
+        
+
+
     }
+
+   
 }
 
 

@@ -12,7 +12,29 @@
             <a class="container-text-large" href="#projects">Projects</a>
         </nav>
 
-        <img class="logo" src="assets/icons-above-the-fold/logo/logo.png" alt="">
+       <div class="logo-wrapper">
+
+        <div class="hand-logo-wrapper">
+            <img class="hand-logo d-none" src="assets/icons-above-the-fold/logo/hand-wave2.png" alt="">
+        </div>
+
+        <div class="logo-and-mouth">
+
+          
+            <div class="logo"
+              (mouseenter)="handleLogoHover()" 
+              (mouseleave)="handleLogoMouseLeave()">
+              <img src="assets/icons-above-the-fold/logo/logo.png" alt="">
+              
+            </div>
+           
+            <p class="mouth d-none">)</p>
+           
+          </div>
+
+          
+
+        </div>
         
     </div>
 </div>

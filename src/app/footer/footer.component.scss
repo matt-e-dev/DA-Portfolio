@@ -9,11 +9,36 @@
 .footer-content {
 
     display: flex;
-    gap:160px;
+    justify-content: space-between;
+    align-items: center;
     color:white;
     max-width:1440px;
     width:100%;
     margin: 0px 96px;
+
+    >.left-container-footer {
+
+
+      
+
+    }
+
+    >.middle-container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >.logo img{
+
+            height:160px;
+            width:160px;
+        }
+
+
+
+    }
+ 
 
 }
    

@@ -17,8 +17,6 @@
         display: flex;
         justify-content: space-between;
         
-        
-
         .project-card-text {
             max-width:880px;
             width:100%;
@@ -32,7 +30,13 @@
         
             &:hover  {
         
-                background-color: var(--primary-color);
+                background-color:  var(--background-color-green);
+            }
+
+            .arrow-hover {
+
+                height:24px;
+                width:24px;
             }
         
         }

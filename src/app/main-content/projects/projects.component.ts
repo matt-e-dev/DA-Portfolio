@@ -94,4 +94,25 @@ export class ProjectsComponent {
   
     document.body.classList.remove('no-scroll');
   }
+
+  hoverArrows(projectId: string): void {
+    const arrowHoverRef = document.getElementById(`arrowHover-${projectId}`);
+    arrowHoverRef?.classList.toggle('d-none'); 
+  }
+
+
+  handleMouseLeave(projectId: string): void {
+    this.toggleImage(projectId, false); 
+    const arrowHoverRef = document.getElementById(`arrowHover-${projectId}`);
+    arrowHoverRef?.classList.add('d-none'); 
+  }
+
+  handleMouseOver(projectId: string): void {
+    this.toggleImage(projectId, true);
+    this.hoverArrows(projectId);
+
+  
+  }
+
+
 }

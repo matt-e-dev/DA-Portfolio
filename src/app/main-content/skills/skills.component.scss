@@ -27,9 +27,13 @@
             background-color: var(--background-color-green-containers);
             padding:24px;
 
+            h2 {
+                margin:0;
+            }
+
             .skills-contact-p {
               
-                padding:24px 0px;   
+                padding:12px 0px;   
             }
             
             .extra-white-space {
@@ -50,6 +54,7 @@
         margin-top:72px;
         font-size:var(--font-size-text);
         color:var(--text-color);
+        font-family: 'firaCode';
 
     
         .skills-row {

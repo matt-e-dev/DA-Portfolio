@@ -26,10 +26,12 @@
         
         h2 {
             font-size: var(--font-size-h2);
+            font-family:'FiraCode';
         }
 
         h1 {
             font-size: var(--font-size-h1);
+            font-family:'Karla';
             margin-top:0;
          
         }
@@ -54,9 +56,10 @@
 
         .email-sideways {
             writing-mode: vertical-rl; 
-            text-orientation: mixed; 
+            text-orientation: mixed;
             transform: rotate(180deg); 
             font-size: var(--font-size-text-large);
+            font-family: 'FiraCode';
             cursor: pointer;
 
             &:hover {

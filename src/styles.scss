@@ -1,16 +1,43 @@
 /* You can add global styles to /* Apply global styles */
+* {
 
-html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--background-color-black);
     margin: 0;
-    box-sizing: border-box;
     
 }
 
+/* FiraCode */
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('assets/fonts/Fira_Code/FiraCode-Regular.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('assets/fonts/Fira_Code/FiraCode-Bold.ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    src: url('assets/fonts/Fira_Code/FiraCode-Light.ttf') format('truetype');
+   
+}
+
+/* Karla */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/fonts/Karla/Karla-Regular.ttf') format('truetype');
+    
+}
 
 :root {
 
@@ -62,8 +89,10 @@ a {
 
 
 .container-headers {
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-light);
     font-size: var( --font-size-text-xlarge);
+    font-family:'Karla';
+    
 
 }
 
@@ -71,6 +100,7 @@ a {
 
     font-size: var(--font-size-h2);
     font-weight: var(--font-weight-normal);
+    font-family:'FiraCode';
     
 }
 
@@ -80,6 +110,7 @@ a {
     font-size: var(--font-size-text);
     color:var(--text-color);
     line-height: 120%;
+    font-family:'Karla';
 }
 
 .container-text {
@@ -88,6 +119,7 @@ a {
     font-size: var(--font-size-text-large);
     color:var(--text-color);
     line-height: 120%;
+    font-family:'Karla';
 }
 
 .container-text-large {
@@ -95,13 +127,16 @@ a {
     font-weight: var(--font-weight-normal);
     font-size: var( --font-size-text-xlarge);
     color:var(--text-color);
+    font-family:'firaCode';
 }
+
 
 
 .main-btns {
     color: var(--text-color);
     background-color: transparent;
     font-size: var(--font-size-text-large);
+    font-family: 'Karla';
     border: 1px solid var(--primary-color);
     padding: 16px 32px;
     border-radius: 24px;

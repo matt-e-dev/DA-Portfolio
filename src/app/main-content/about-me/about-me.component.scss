@@ -25,8 +25,8 @@
         position: relative;
     
         .picture-deco-container {
-            width: 120%; 
-            height: 120%; 
+            width: 105%; 
+            height: 105%; 
             border-radius: 16px;
             background: repeating-linear-gradient(
                 45deg,
@@ -56,8 +56,12 @@
                 width:100%;
                 border:2px solid var(--primary-color);
                 border-radius:16px;
-                padding: 0px 40px;
+                padding: 32px;
                 background-color: var(--background-color-green-containers);
+
+                h2 {
+                    margin:0;
+                }
                 
             }
 

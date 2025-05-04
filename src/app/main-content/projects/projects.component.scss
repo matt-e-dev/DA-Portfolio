@@ -16,6 +16,7 @@
     .project-card {
         display: flex;
         justify-content: space-between;
+    
         
         .project-card-text {
             max-width:880px;
@@ -26,6 +27,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;;
+            min-width:310px;
             
         
             &:hover  {
@@ -44,7 +46,6 @@
         img {
             width: 280px;
             height: 200px;
-            overflow-x: hidden;
             transition: transform 0.3s ease; /* Smooth hover effect */
         
             &:hover {
@@ -158,4 +159,11 @@
 }
 }
 
-
+@media (max-width: 1360px) {
+    .project-card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: flex-start; 
+    }
+}

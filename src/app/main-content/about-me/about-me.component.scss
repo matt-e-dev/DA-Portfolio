@@ -14,17 +14,16 @@
     margin: 0px 96px;
     margin-top:160px;
     
-   
 
     .left-side-container {
-        height: 560px;
+        height: clamp(300px, 40vw, 560px); /* Dynamically adjust height */
+        width: clamp(300px, 40vw, 560px); /* Keep width proportional to height */
         max-width: 560px;
-        min-width:300px;
-        width: 100%;
+        min-width: 300px;
         border: 2px solid var(--primary-color);
         border-radius: 16px;
         position: relative;
-    
+        
         .picture-deco-container {
             width: 105%; 
             height: 105%; 

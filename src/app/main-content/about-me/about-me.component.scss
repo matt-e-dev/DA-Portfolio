@@ -12,12 +12,14 @@
     display: flex;
     justify-content: space-between;
     margin: 0px 96px;
+    margin-top:160px;
     
    
 
     .left-side-container {
         height: 560px;
         max-width: 560px;
+        min-width:300px;
         width: 100%;
         border: 2px solid var(--primary-color);
         border-radius: 16px;
@@ -43,12 +45,14 @@
 
         .info-container-wrapper {
 
-            margin-top:160px;
-
+             min-height: 560px; 
+             max-width: 560px; 
+                min-width:260px;
 
             >.info-container {
                 min-height: 560px; 
                 max-width: 560px; 
+                min-width:260px;
                 width: 100%;
                 border: 2px solid var(--primary-color);
                 border-radius: 16px;
@@ -90,6 +94,9 @@
         }
         
     }
+
+   
+
 
 
 

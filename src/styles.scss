@@ -61,8 +61,8 @@ body {
 
     --font-size-text-small-responsive: 0.875rem; /* 14px */
     --font-size-text-normal-responsive: 1rem; /* 16px */
-    --font-size-text-large: 1.5rem; /* 24px */
-    --container-headers-inside-responsive: 3rem;
+    --font-size-text-large-responsive: 1.25rem; /* 20px */
+    --container-headers-inside-responsive: 2.5rem;
     --font-size-h2: 4rem; /* 64px */
     --font-size-h1: 8rem; /* 128px */
 
@@ -136,13 +136,14 @@ a {
     color: var(--text-color);
     line-height: 120%;
     font-family: 'Karla';
+
+    @media (max-width: 600px) {
+           font-size:var(--font-size-text-normal-responsive);   
+        }
 }
 
-@media (max-width: 600px) {
-    .container-text {
-       font-size:var(--font-size-text-normal-responsive);   
-    }
-}
+
+
 
 .container-text-large {
 
@@ -150,6 +151,11 @@ a {
     font-size: var( --font-size-text-large);
     color:var(--text-color);
     font-family:'firaCode';
+
+    @media (max-width: 600px) {
+        font-size:var(--font-size-text-large-responsive);   
+     }
+  
 }
 
 

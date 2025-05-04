@@ -16,16 +16,21 @@
 
     .text-container-wrapper {
 
+        max-width:520px;
+        min-width:280px;
+        width:100%;
+
         >.skills-text-container{
 
-            height:520px;
             max-width:520px;
+            min-width:280px;
             width:100%;
             border:2px solid var(--primary-color);
             border-radius:16px;
             color:var(--text-color);
             background-color: var(--background-color-green-containers);
             padding:32px;
+            overflow:hidden;
 
             h2 {
                 margin:0;
@@ -43,12 +48,10 @@
 
         }
 
-        
-
     }
 
     >.skills-icons-container {
-        height: 546px;
+       
         max-width: 640px;
         width: 100%;
         margin-top:72px;
@@ -93,3 +96,5 @@
     }
     
 }
+
+    

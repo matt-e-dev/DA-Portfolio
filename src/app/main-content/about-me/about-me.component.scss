@@ -2,7 +2,6 @@
 
     display: flex;
     justify-content: center;
-    height:100vh;
     padding-top:48px;
 }
 
@@ -40,7 +39,6 @@
             left: 0;
         }
     
-        
     }
 
         .info-container-wrapper {
@@ -52,6 +50,7 @@
 
                 
                 height:560px;
+                min-height:560px;
                 max-width:560px;
                 width:100%;
                 border:2px solid var(--primary-color);
@@ -81,6 +80,18 @@
 
       
 
+    }
+
+    @media (max-width: 1360px) {
+        .about-me-content {
+
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            padding-top:48px;
+            height:auto;
+        }
+        
     }
 
    

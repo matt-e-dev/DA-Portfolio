@@ -52,10 +52,17 @@ body {
 
     /*CSS variables for fonts */
 
-    --font-size-small: 0.875rem; /* 14px */
-    --font-size-text: 1rem; /* 16px */
-    --font-size-text-large: 1.25rem; /* 20px */
-    --font-size-text-xlarge: 1.5rem; /* 24px */
+    
+    --font-size-text-small: 1rem; /* 16px */
+    --font-size-text-normal: 1.125rem; /* 18px */
+    --font-size-text-large: 1.5rem; /* 24px */
+    --container-headers-inside: 4rem; /* 64px */
+    --font-size-h1: 8rem; /* 128px */
+
+    --font-size-text-small-responsive: 0.875rem; /* 14px */
+    --font-size-text-normal-responsive: 1rem; /* 16px */
+    --font-size-text-large: 1.5rem; /* 24px */
+    --container-headers-inside-responsive: 3rem;
     --font-size-h2: 4rem; /* 64px */
     --font-size-h1: 8rem; /* 128px */
 
@@ -90,7 +97,7 @@ a {
 
 .container-headers {
     font-weight: var(--font-weight-light);
-    font-size: var( --font-size-text-xlarge);
+    font-size: var( --font-size-text-large);
     font-family:'Karla';
     
 
@@ -98,44 +105,58 @@ a {
 
 .container-headers-inside {
 
-    font-size: var(--font-size-h2);
+    font-size: var( --container-headers-inside);
     font-weight: var(--font-weight-normal);
     font-family:'FiraCode';
+
+    @media (max-width: 600px) {
+        font-size:var(--container-headers-inside-responsive);   
+        
+    }
     
 }
 
 .container-text-small {
 
     font-weight: var(--font-weight-light);
-    font-size: var(--font-size-text);
+    font-size: var(--font-size-text-small);
     color:var(--text-color);
     line-height: 120%;
     font-family:'Karla';
+
+    @media (max-width: 600px) {
+        font-size:var(--font-size-text-small-responsive);   
+        
+    }
 }
 
 .container-text {
-
     font-weight: var(--font-weight-light);
-    font-size: var(--font-size-text-large);
-    color:var(--text-color);
+    font-size: var(--font-size-text-normal);
+    color: var(--text-color);
     line-height: 120%;
-    font-family:'Karla';
+    font-family: 'Karla';
+}
+
+@media (max-width: 600px) {
+    .container-text {
+       font-size:var(--font-size-text-normal-responsive);   
+    }
 }
 
 .container-text-large {
 
     font-weight: var(--font-weight-normal);
-    font-size: var( --font-size-text-xlarge);
+    font-size: var( --font-size-text-large);
     color:var(--text-color);
     font-family:'firaCode';
 }
 
 
-
 .main-btns {
     color: var(--text-color);
     background-color: transparent;
-    font-size: var(--font-size-text-large);
+    font-size: var(--font-size-text-normal);
     font-family: 'Karla';
     border: 1px solid var(--primary-color);
     padding: 16px 32px;

@@ -47,23 +47,20 @@
 
 
             >.info-container {
-
-                
-                height:560px;
-                min-height:560px;
-                max-width:560px;
-                width:100%;
-                border:2px solid var(--primary-color);
-                border-radius:16px;
+                min-height: 560px; 
+                max-width: 560px; 
+                width: 100%;
+                border: 2px solid var(--primary-color);
+                border-radius: 16px;
                 padding: 32px;
                 background-color: var(--background-color-green-containers);
-
+                overflow: hidden; 
+               
+            
                 h2 {
-                    margin:0;
+                    margin: 0;
                 }
-                
             }
-
             .info-container-text {
 
                 display: flex;
@@ -93,6 +90,9 @@
         }
         
     }
+
+
+
 
    
 

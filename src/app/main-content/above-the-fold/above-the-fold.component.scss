@@ -25,16 +25,15 @@
         
         
         h2 {
-            font-size: var(--font-size-h2);
-            font-family:'FiraCode';
+            font-size: clamp(1.4rem, 5vw, 4rem); 
+            font-family: 'FiraCode';
         }
 
         h1 {
-            font-size: var(--font-size-h1);
-            font-family:'Karla';
-            margin-top:0;
+            font-size: clamp(2.5rem, 8vw, 8rem); 
+            font-family: 'Karla';
+            margin-top: 0;
             text-align: center;
-         
         }
 
         .header-buttons {
@@ -165,7 +164,44 @@
         }
       }
 
+}
 
+@media (max-width: 1360px) {
+  
+    .above-the-fold-wrapper {
+
+        padding:24px;
+    }
+
+}
+
+@media (max-width: 600px) {
+  
+    .email-sideways {
+
+        display:none;
+    }
+
+    .header-buttons {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+  .right-side-content-above-the-fold {
+
+    padding-top:570px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  
+    .above-the-fold-wrapper {
+
+        padding:4px;
+    }
 
   
+
 }

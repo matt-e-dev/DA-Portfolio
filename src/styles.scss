@@ -3,6 +3,8 @@
 
     scroll-behavior: smooth;
     box-sizing: border-box;
+    scrollbar-width: thin; 
+    scrollbar-color: var(--primary-color) transparent; 
 }
 
 body {
@@ -56,12 +58,14 @@ body {
     --font-size-text-small: 1rem; /* 16px */
     --font-size-text-normal: 1.125rem; /* 18px */
     --font-size-text-large: 1.5rem; /* 24px */
+    --container-headers: 1.5rem; /* 24px */
     --container-headers-inside: 4rem; /* 64px */
     --font-size-h1: 8rem; /* 128px */
 
     --font-size-text-small-responsive: 0.875rem; /* 14px */
     --font-size-text-normal-responsive: 1rem; /* 16px */
     --font-size-text-large-responsive: 1.25rem; /* 20px */
+    --container-headers-responsive: 1.125rem; /* 18px */
     --container-headers-inside-responsive: 2.5rem;
     --font-size-h2: 4rem; /* 64px */
     --font-size-h1: 8rem; /* 128px */
@@ -97,7 +101,7 @@ a {
 
 .container-headers {
     font-weight: var(--font-weight-light);
-    font-size: var( --font-size-text-large);
+    font-size: clamp(var(--container-headers-responsive), 3vw, var(--container-headers)); 
     font-family:'Karla';
     
 }

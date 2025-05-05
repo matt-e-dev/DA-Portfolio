@@ -46,6 +46,14 @@
                 margin-right:16px;
             }
 
+            .skills-container-text-large{
+                font-weight: var(--font-weight-normal);
+                font-size: clamp(var(--font-size-text-normal-responsive), 2.5vw, var(--font-size-text-large)); 
+                color: var(--text-color);
+                font-family: 'FiraCode';
+            }
+            
+
         }
 
     }
@@ -84,6 +92,7 @@
     }
 
 }
+
 
 @media (max-width: 1360px) {
     .skills-content {

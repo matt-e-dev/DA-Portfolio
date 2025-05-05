@@ -100,64 +100,36 @@ a {
     font-size: var( --font-size-text-large);
     font-family:'Karla';
     
-
 }
 
 .container-headers-inside {
-
-    font-size: var( --container-headers-inside);
+    font-size: clamp(var(--container-headers-inside-responsive), 3vw, var(--container-headers-inside)); // Adjusted for responsiveness
     font-weight: var(--font-weight-normal);
-    font-family:'FiraCode';
-
-    @media (max-width: 600px) {
-        font-size:var(--container-headers-inside-responsive);   
-        
-    }
-    
+    font-family: 'FiraCode';
 }
 
 .container-text-small {
-
     font-weight: var(--font-weight-light);
-    font-size: var(--font-size-text-small);
-    color:var(--text-color);
+    font-size: clamp(var(--font-size-text-small-responsive), 2.5vw, var(--font-size-text-small)); // Adjusted for responsiveness
+    color: var(--text-color);
     line-height: 120%;
-    font-family:'Karla';
-
-    @media (max-width: 600px) {
-        font-size:var(--font-size-text-small-responsive);   
-        
-    }
+    font-family: 'Karla';
 }
 
 .container-text {
     font-weight: var(--font-weight-light);
-    font-size: var(--font-size-text-normal);
+    font-size: clamp(var(--font-size-text-normal-responsive), 2vw, var(--font-size-text-normal)); // Adjusted for responsiveness
     color: var(--text-color);
     line-height: 120%;
     font-family: 'Karla';
-
-    @media (max-width: 600px) {
-           font-size:var(--font-size-text-normal-responsive);   
-        }
 }
-
-
-
 
 .container-text-large {
-
     font-weight: var(--font-weight-normal);
-    font-size: var( --font-size-text-large);
-    color:var(--text-color);
-    font-family:'firaCode';
-
-    @media (max-width: 600px) {
-        font-size:var(--font-size-text-large-responsive);   
-     }
-  
+    font-size: clamp(var(--font-size-text-normal-responsive), 2.5vw, var(--font-size-text-large)); // Adjusted for responsiveness
+    color: var(--text-color);
+    font-family: 'FiraCode';
 }
-
 
 .main-btns {
     color: var(--text-color);

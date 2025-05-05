@@ -44,4 +44,9 @@ export class NavbarComponent implements AfterViewInit {
     mouthElement?.classList.add('d-none');
     handElement?.classList.add('d-none');
   }
+
+  toggleOverlay(): void {
+    const overlay = document.getElementById('navbarOverlay');
+    overlay?.classList.toggle('d-none'); // 
+  }
 }

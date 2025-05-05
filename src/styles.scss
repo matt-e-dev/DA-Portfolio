@@ -103,14 +103,14 @@ a {
 }
 
 .container-headers-inside {
-    font-size: clamp(var(--container-headers-inside-responsive), 3vw, var(--container-headers-inside)); // Adjusted for responsiveness
+    font-size: clamp(var(--container-headers-inside-responsive), 3vw, var(--container-headers-inside)); 
     font-weight: var(--font-weight-normal);
     font-family: 'FiraCode';
 }
 
 .container-text-small {
     font-weight: var(--font-weight-light);
-    font-size: clamp(var(--font-size-text-small-responsive), 2.5vw, var(--font-size-text-small)); // Adjusted for responsiveness
+    font-size: clamp(var(--font-size-text-small-responsive), 2.5vw, var(--font-size-text-small)); 
     color: var(--text-color);
     line-height: 120%;
     font-family: 'Karla';
@@ -118,7 +118,7 @@ a {
 
 .container-text {
     font-weight: var(--font-weight-light);
-    font-size: clamp(var(--font-size-text-normal-responsive), 2vw, var(--font-size-text-normal)); // Adjusted for responsiveness
+    font-size: clamp(var(--font-size-text-normal-responsive), 2vw, var(--font-size-text-normal)); 
     color: var(--text-color);
     line-height: 120%;
     font-family: 'Karla';
@@ -126,7 +126,7 @@ a {
 
 .container-text-large {
     font-weight: var(--font-weight-normal);
-    font-size: clamp(var(--font-size-text-normal-responsive), 2.5vw, var(--font-size-text-large)); // Adjusted for responsiveness
+    font-size: clamp(var(--font-size-text-large-responsive), 2.5vw, var(--font-size-text-large)); 
     color: var(--text-color);
     font-family: 'FiraCode';
 }

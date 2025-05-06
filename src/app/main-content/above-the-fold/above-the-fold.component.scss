@@ -51,6 +51,10 @@
     gap: 24px;
     padding-top: 360px;
 
+    @media (max-width: 1100px) {
+      padding-top: 580px;
+    }
+
     .email-sideways {
       writing-mode: vertical-rl;
       text-orientation: mixed;
@@ -163,18 +167,21 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .email-sideways {
     display: none;
-  }
-
-  .header-buttons {
-    display: flex;
-    flex-direction: column;
+   
   }
 
   .right-side-content-above-the-fold {
-    padding-top: 570px;
+    padding-top: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
   }
 }
 

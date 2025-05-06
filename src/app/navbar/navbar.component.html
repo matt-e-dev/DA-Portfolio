@@ -1,58 +1,61 @@
 <div class="navbar-wrapper">
+  <div class="navbar">
+    <nav class="navbar-container">
+      <div class="toggle-button navbar-before-responsive">
+        <button class="toggle-option active">EN</button>
+        <button class="toggle-option">DE</button>
+      </div>
+      <a class="container-text-large navbar-before-responsive" href="#about-me">About Me</a >
+      <a class="container-text-large navbar-before-responsive" href="#skills" >Skills</a >
+      <a class="container-text-large navbar-before-responsive" href="#projects">Projects</a>
 
-    <div class="navbar">
-
-        <nav class="navbar-container">
-            
-            <div class="toggle-button navbar-before-responsive">
+      <div class="navbar-burger-menu-overlay-wrapper">
+        <img
+          class="navbar-burger-menu"
+          id="navbarBurgerMenu"
+          src="assets/navbar/burger-menu.svg"
+          alt="Burger Menu"
+          (click)="toggleOverlay()"
+        />
+        <div class="navbar-overlay d-none" id="navbarOverlay">
+          <div class="navbar-overlay-content">
+            <div class="navbar-overlay-close" id="navbarOverlayClose">
+              <span (click)="toggleOverlay()">X</span>
+            </div>
+            <div class="navbar-overlay-links">
+              <a class="container-text-large" href="#about-me">About Me</a>
+              <a class="container-text-large" href="#skills">Skills</a>
+              <a class="container-text-large" href="#projects">Projects</a>
+              <div class="toggle-button">
                 <button class="toggle-option active">EN</button>
                 <button class="toggle-option">DE</button>
-            </div>
-            <a class="container-text-large navbar-before-responsive" href="#about-me">About Me</a>
-            <a class="container-text-large navbar-before-responsive" href="#skills">Skills</a>
-            <a class="container-text-large navbar-before-responsive" href="#projects">Projects</a>
-
-            <div class="navbar-burger-menu-overlay-wrapper">
-                <img class="navbar-burger-menu"  id="navbarBurgerMenu" src="assets/navbar/burger-menu.svg" alt="Burger Menu" (click)="toggleOverlay()">
-                    <div class="navbar-overlay d-none" id="navbarOverlay">
-                        <div class="navbar-overlay-content">
-                            <div class="navbar-overlay-close" id="navbarOverlayClose" >
-                                <span (click)="toggleOverlay()">X</span>
-                            </div>
-                            <div class="navbar-overlay-links">
-                                <a class="container-text-large" href="#about-me">About Me</a>
-                                <a class="container-text-large" href="#skills">Skills</a>
-                                <a class="container-text-large" href="#projects">Projects</a>
-                                <div class="toggle-button">
-                                    <button class="toggle-option active">EN</button>
-                                    <button class="toggle-option">DE</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
               </div>
-        </nav>
-
-       <div class="logo-wrapper">
-
-            <div class="hand-logo-wrapper">
-                <img class="hand-logo d-none" src="assets/icons-above-the-fold/logo/hand-wave2.png" alt="">
             </div>
-
-            <div class="logo-and-mouth">
-
-            
-                <div class="logo"
-                (mouseenter)="handleLogoHover()" 
-                (mouseleave)="handleLogoMouseLeave()">
-                <img src="assets/icons-above-the-fold/logo/logo.png" alt="">
-                
-                </div>
-            
-                <p class="mouth d-none">)</p>
-            
-            </div>
+          </div>
         </div>
-        
+      </div>
+    </nav>
+
+    <div class="logo-wrapper">
+      <div class="hand-logo-wrapper">
+        <img
+          class="hand-logo d-none"
+          src="assets/icons-above-the-fold/logo/hand-wave2.png"
+          alt=""
+        />
+      </div>
+
+      <div class="logo-and-mouth">
+        <div
+          class="logo"
+          (mouseenter)="handleLogoHover()"
+          (mouseleave)="handleLogoMouseLeave()"
+        >
+          <img src="assets/icons-above-the-fold/logo/logo.png" alt="" />
+        </div>
+
+        <p class="mouth d-none">)</p>
+      </div>
     </div>
+  </div>
 </div>

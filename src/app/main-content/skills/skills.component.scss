@@ -1,109 +1,95 @@
 .skills-wrapper {
-
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
 }
 
 .skills-content {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0px 96px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 96px;
 
-    max-width:1440px;
-    width:100%;
-    margin: 0px 96px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 96px;
+  .text-container-wrapper {
+    max-width: 520px;
+    min-width: 280px;
+    width: 100%;
 
-    .text-container-wrapper {
+    > .skills-text-container {
+      max-width: 520px;
+      min-width: 280px;
+      width: 100%;
+      border: 2px solid var(--primary-color);
+      border-radius: 16px;
+      color: var(--text-color);
+      background-color: var(--background-color-green-containers);
+      padding: 32px;
+      overflow: hidden;
 
-        max-width:520px;
-        min-width:280px;
-        width:100%;
+      h2 {
+        margin: 0;
+      }
 
-        >.skills-text-container{
+      .skills-contact-p {
+        padding: 12px 0px;
+      }
 
-            max-width:520px;
-            min-width:280px;
-            width:100%;
-            border:2px solid var(--primary-color);
-            border-radius:16px;
-            color:var(--text-color);
-            background-color: var(--background-color-green-containers);
-            padding:32px;
-            overflow:hidden;
+      .extra-white-space {
+        margin-right: 16px;
+      }
 
-            h2 {
-                margin:0;
-            }
+      .skills-container-text-large {
+        font-weight: var(--font-weight-normal);
+        font-size: clamp(
+          var(--font-size-text-normal-responsive),
+          2.5vw,
+          var(--font-size-text-large)
+        );
+        color: var(--text-color);
+        font-family: "FiraCode";
+      }
+    }
+  }
 
-            .skills-contact-p {
-              
-                padding:12px 0px;   
-            }
-            
-            .extra-white-space {
+  > .skills-icons-container {
+    max-width: 640px;
+    width: 100%;
+    margin-top: 72px;
+    font-size: var(--font-size-text);
+    color: var(--text-color);
+    font-family: "firaCode";
 
-                margin-right:16px;
-            }
-
-            .skills-container-text-large{
-                font-weight: var(--font-weight-normal);
-                font-size: clamp(var(--font-size-text-normal-responsive), 2.5vw, var(--font-size-text-large)); 
-                color: var(--text-color);
-                font-family: 'FiraCode';
-            }
-            
-
-        }
-
+    .skills-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
     }
 
-    >.skills-icons-container {
-       
-        max-width: 640px;
-        width: 100%;
-        margin-top:72px;
-        font-size:var(--font-size-text);
-        color:var(--text-color);
-        font-family: 'firaCode';
-
-    
-        .skills-row {
-            display: flex; 
-            justify-content: space-between; 
-            margin-bottom: 16px; 
-        }
-    
-        .skills {
-            text-align: center; 
-            max-width: 120px; 
-            flex: 1; 
-        }
-    
-        .skills img {
-            max-width: 100%;
-            height: auto;
-
-            &:hover {
-                transform: scale(1.3);
-                transition: transform 0.3s ease;
-            }
-        }
+    .skills {
+      text-align: center;
+      max-width: 120px;
+      flex: 1;
     }
 
+    .skills img {
+      max-width: 100%;
+      height: auto;
+
+      &:hover {
+        transform: scale(1.3);
+        transition: transform 0.3s ease;
+      }
+    }
+  }
 }
-
 
 @media (max-width: 1360px) {
-    .skills-content {
-
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        padding-top:48px;
-        height:auto;
-    }
-    
+  .skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 48px;
+    height: auto;
+  }
 }
-
-    

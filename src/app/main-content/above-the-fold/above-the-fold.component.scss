@@ -1,207 +1,185 @@
 .above-the-fold-wrapper {
-    color: var(--text-color);
-    height: 100vh;
-    padding: 0px 96px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(100deg, var(--background-color-black), var(--background-color-green));
+  color: var(--text-color);
+  height: 100vh;
+  padding: 0px 96px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    100deg,
+    var(--background-color-black),
+    var(--background-color-green)
+  );
 }
 
 .above-the-fold-content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
 
-    max-width:1440px;
-    width: 100%;
+  .header-text {
     display: flex;
-    justify-content: space-between;
-    height:100vh;
-    
-    .header-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 176px;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom:176px;
-        
-        
-        h2 {
-            font-size: clamp(1.4rem, 5vw, 4rem); 
-            font-family: 'FiraCode';
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 8rem); 
-            font-family: 'Karla';
-            margin-top: 0;
-            text-align: center;
-        }
-
-        .header-buttons {
-
-            display: flex;
-            gap:24px;
-        }
-
+    h2 {
+      font-size: clamp(1.4rem, 5vw, 4rem);
+      font-family: "FiraCode";
     }
 
-    .right-side-content-above-the-fold {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap:24px;
-        padding-top:360px;
-       
-
-        .email-sideways {
-            writing-mode: vertical-rl; 
-            text-orientation: mixed;
-            transform: rotate(180deg); 
-            font-size: var(--font-size-text-large);
-            font-family: 'FiraCode';
-            cursor: pointer;
-
-            &:hover {
-                transform: scale(1.1); 
-                color: var(--primary-color);
-
-            }
-        }
-
-        >.deco-line-right {
-
-            width: 2px;
-            height: 180px;
-            background-color: var(--text-color);
-        }
-
-        img {
-        
-            &:hover {
-                transform: scale(1.33);
-                cursor:pointer;
-            }
-
-        }
-        
-        
-    }
-
-    .left-side-content-above-the-fold {
-        padding-top: 560px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-    
-        >.deco-line-left {
-            width: 2px;
-            height: 240px;
-            background-color: var(--primary-color);
-        }
-    
-        .arrow-icon {
-            width: 20px; 
-            height: 60px;
-            border: 2px solid var(--primary-color); 
-            border-radius: 24px; 
-    
-            line, polyline {
-                stroke: var(--text-color); 
-                animation: bounce-arrow 1.5s infinite; 
-            }
-        }
-    
-        @keyframes bounce-arrow {
-            0%, 100% {
-                transform: translateY(0); /* Start and end at the original position */
-            }
-            50% {
-                transform: translateY(5px); /* Move down by 5px */
-            }
-        }
-    }
-    .slider{
-        background-color:rgba(255, 255, 255, 0.089);
-        position:absolute;
-        bottom:80px;
-        height:60px;
-        width:100%;
-        max-width:1920px;
-        transform: rotate(-5deg);
-        overflow: hidden;
-
-        @keyframes slide {
-            0% {
-                transform: translateX(0%); 
-            }
-            100% {
-                transform: translateX(-50%); 
-            }
-          }
-
-        .slider-content{
-          display: flex; 
-          align-items: center;
-          height:100%;
-          width:100%;
-          animation: slide 5s linear infinite;
-
-            p {
-            color:var(--primary-color);
-            font-size:32px;
-            font-weight:400;
-            white-space: nowrap; 
-            padding: 0 24px;
-            }
-
-            .slider-devider-dots{
-                font-weight:600;
-              }
-        
-        }
-      }
-
-}
-
-@media (max-width: 1360px) {
-  
-    .above-the-fold-wrapper {
-
-        padding:24px;
-    }
-
-}
-
-@media (max-width: 600px) {
-  
-    .email-sideways {
-
-        display:none;
+    h1 {
+      font-size: clamp(2.5rem, 8vw, 8rem);
+      font-family: "Karla";
+      margin-top: 0;
+      text-align: center;
     }
 
     .header-buttons {
-
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      gap: 24px;
     }
-
-  .right-side-content-above-the-fold {
-
-    padding-top:570px;
   }
 
+  .right-side-content-above-the-fold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-top: 360px;
+
+    .email-sideways {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      font-size: var(--font-size-text-large);
+      font-family: "FiraCode";
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+        color: var(--primary-color);
+      }
+    }
+
+    > .deco-line-right {
+      width: 2px;
+      height: 180px;
+      background-color: var(--text-color);
+    }
+
+    img {
+      &:hover {
+        transform: scale(1.33);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .left-side-content-above-the-fold {
+    padding-top: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    > .deco-line-left {
+      width: 2px;
+      height: 240px;
+      background-color: var(--primary-color);
+    }
+
+    .arrow-icon {
+      width: 20px;
+      height: 60px;
+      border: 2px solid var(--primary-color);
+      border-radius: 24px;
+
+      line,
+      polyline {
+        stroke: var(--text-color);
+        animation: bounce-arrow 1.5s infinite;
+      }
+    }
+
+    @keyframes bounce-arrow {
+      0%,
+      100% {
+        transform: translateY(0); /* Start and end at the original position */
+      }
+      50% {
+        transform: translateY(5px); /* Move down by 5px */
+      }
+    }
+  }
+  .slider {
+    background-color: rgba(255, 255, 255, 0.089);
+    position: absolute;
+    bottom: 80px;
+    height: 60px;
+    width: 100%;
+    max-width: 1920px;
+    transform: rotate(-5deg);
+    overflow: hidden;
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .slider-content {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      animation: slide 5s linear infinite;
+
+      p {
+        color: var(--primary-color);
+        font-size: 32px;
+        font-weight: 400;
+        white-space: nowrap;
+        padding: 0 24px;
+      }
+
+      .slider-devider-dots {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .above-the-fold-wrapper {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .email-sideways {
+    display: none;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-side-content-above-the-fold {
+    padding-top: 570px;
+  }
 }
 
 @media (max-width: 400px) {
-  
-    .above-the-fold-wrapper {
-
-        padding:4px;
-    }
-
-  
-
+  .above-the-fold-wrapper {
+    padding: 4px;
+  }
 }

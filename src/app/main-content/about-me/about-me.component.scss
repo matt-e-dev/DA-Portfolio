@@ -1,105 +1,81 @@
 .about-me-wrapper {
-
-    display: flex;
-    justify-content: center;
-    padding-top:48px;
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
 }
 
 .about-me-content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 96px;
+  margin-top: 160px;
 
-    max-width:1440px;
-    width:100%;
+  .left-side-container {
+    height: clamp(300px, 40vw, 560px); /* Dynamically adjust height */
+    width: clamp(300px, 40vw, 560px); /* Keep width proportional to height */
+    max-width: 560px;
+    min-width: 300px;
+    border: 2px solid var(--primary-color);
+    border-radius: 16px;
+    position: relative;
+
+    .picture-deco-container {
+      width: 105%;
+      height: 105%;
+      border-radius: 16px;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 30px,
+        var(--primary-color) 30px,
+        var(--primary-color) 32px
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .info-container-wrapper {
+    min-height: 560px;
+    max-width: 560px;
+    min-width: 260px;
+
+    > .info-container {
+      min-height: 560px;
+      max-width: 560px;
+      min-width: 260px;
+      width: 100%;
+      border: 2px solid var(--primary-color);
+      border-radius: 16px;
+      padding: 32px;
+      background-color: var(--background-color-green-containers);
+      overflow: hidden;
+
+      h2 {
+        margin: 0;
+      }
+    }
+    .info-container-text {
+      display: flex;
+      padding-bottom: 20px;
+      gap: 20px;
+
+      &:hover {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .about-me-content {
     display: flex;
-    justify-content: space-between;
-    margin: 0px 96px;
-    margin-top:160px;
-    
-
-    .left-side-container {
-        height: clamp(300px, 40vw, 560px); /* Dynamically adjust height */
-        width: clamp(300px, 40vw, 560px); /* Keep width proportional to height */
-        max-width: 560px;
-        min-width: 300px;
-        border: 2px solid var(--primary-color);
-        border-radius: 16px;
-        position: relative;
-        
-        .picture-deco-container {
-            width: 105%; 
-            height: 105%; 
-            border-radius: 16px;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 30px, 
-                var(--primary-color) 30px,
-                var(--primary-color) 32px 
-            );
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    
-    }
-
-        .info-container-wrapper {
-
-             min-height: 560px; 
-             max-width: 560px; 
-                min-width:260px;
-
-            >.info-container {
-                min-height: 560px; 
-                max-width: 560px; 
-                min-width:260px;
-                width: 100%;
-                border: 2px solid var(--primary-color);
-                border-radius: 16px;
-                padding: 32px;
-                background-color: var(--background-color-green-containers);
-                overflow: hidden; 
-               
-            
-                h2 {
-                    margin: 0;
-                }
-            }
-            .info-container-text {
-
-                display: flex;
-                padding-bottom:20px;
-                gap:20px;
-
-                &:hover {
-
-                    color:rgb(255, 255, 255);
-                }
-            }
-
-        }
-
-      
-
-    }
-
-    @media (max-width: 1360px) {
-        .about-me-content {
-
-            display: flex;
-            flex-direction: column;
-            align-items:center;
-            padding-top:48px;
-            height:auto;
-        }
-        
-    }
-
-   
-
-
-
-
-
-   
-
-
+    flex-direction: column;
+    align-items: center;
+    padding-top: 48px;
+    height: auto;
+  }
+}

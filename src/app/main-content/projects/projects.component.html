@@ -1,72 +1,89 @@
 <div id="projects" class="projects-wrapper">
+  <div class="projects-content">
+    <h3 class="container-headers --primary-color">Portfolio</h3>
+    <h2 class="container-headers-inside --primary-color">Featured Projects</h2>
+    <p class="container-text">
+      Explore a selection of my work here - Interact with projects to see my
+      skills in action.
+    </p>
 
-    <div class="projects-content">
-
-        <h3 class="container-headers --primary-color">Portfolio</h3>
-        <h2 class="container-headers-inside --primary-color">Featured Projects</h2>
-        <p class="container-text ">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
-
-        <div class="projects">
-
-            <div class="left-right-side-wrapper">
-                <div class="left-side-projects-wrapper">
-                    <div 
-                    *ngFor="let project of projects; let i = index" 
-                    class="project-card" 
-                    (click)="openOverlay(project.id)" 
-                    (mouseover)="handleMouseOver(project.id)" 
-                    (mouseleave)="handleMouseLeave(project.id)">
-                  
-                    <div class="project-card-text">
-                      <div class="container-text-large">{{ project.title }}
-                        <img class="arrow-hover d-none" [id]="'arrowHover-' + project.id" src="assets/icons/projects/arrow-hover.png" alt="">
-                      </div>
-                      <p class="container-text">{{ project.technologies }}</p>
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="right-side-container">
-                  <div *ngFor="let project of projects; let i = index">
-                    <div *ngIf="selectedProjectIndex === i" class="project-card-img">
-                      <img [id]="project.id" [src]="project.image" [alt]="project.title">
-                    </div>
-                  </div>
-                </div>
+    <div class="projects">
+      <div class="left-right-side-wrapper">
+        <div class="left-side-projects-wrapper">
+          <div
+            *ngFor="let project of projects; let i = index"
+            class="project-card"
+            (click)="openOverlay(project.id)"
+            (mouseover)="handleMouseOver(project.id)"
+            (mouseleave)="handleMouseLeave(project.id)"
+          >
+            <div class="project-card-text">
+              <div class="container-text-large">
+                {{ project.title }}
+                <img
+                  class="arrow-hover d-none"
+                  [id]="'arrowHover-' + project.id"
+                  src="assets/icons/projects/arrow-hover.png"
+                  alt=""
+                />
               </div>
-              
-
-          
-                <div class="overlay" *ngIf="isOverlayOpen">
-                    <div class="overlay-content" *ngIf="selectedProject">
-                        <div class="description-side-overlay">
-                            <h2 class="count --primary-color">{{ selectedProject.count }}</h2>
-                            <h3 class="title">{{ selectedProject.title }}</h3>
-                            <h4 class="question">{{ selectedProject.question }}</h4>
-                            <p class="description container-text">{{ selectedProject.description }}</p>
-                            <div class="skills-section">
-                                <div class="skills-list container-text-small">
-                                    <div *ngFor="let skill of selectedProject.skills" class="project-skills">
-                                        <img [src]="skill.icon" [alt]="skill.name" class="skill-icon">
-                                        <span>{{ skill.name }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <div class="links">
-                                <a href="">Github</a>
-                                <a href="">Live test</a>
-                            </div>
-                        </div>
-                        <div class="img-side-overlay">
-                            <button class="close-btn" (click)="closeOverlay()">X</button>
-                            <img [src]="selectedProject.image" [alt]="selectedProject.title">
-                            <button class="next-project-btn" (click)="nextProject()">Next Project -></button>
-                        </div>
-                    </div>
-                </div>
-
+              <p class="container-text">{{ project.technologies }}</p>
+            </div>
+          </div>
         </div>
 
+        <div class="right-side-container">
+          <div *ngFor="let project of projects; let i = index">
+            <div *ngIf="selectedProjectIndex === i" class="project-card-img">
+              <img
+                [id]="project.id"
+                [src]="project.image"
+                [alt]="project.title"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay" *ngIf="isOverlayOpen">
+        <div class="overlay-content" *ngIf="selectedProject">
+          <div class="description-side-overlay">
+            <h2 class="count --primary-color">{{ selectedProject.count }}</h2>
+            <h3 class="title">{{ selectedProject.title }}</h3>
+            <h4 class="question">{{ selectedProject.question }}</h4>
+            <p class="description container-text">
+              {{ selectedProject.description }}
+            </p>
+            <div class="skills-section">
+              <div class="skills-list container-text-small">
+                <div
+                  *ngFor="let skill of selectedProject.skills"
+                  class="project-skills"
+                >
+                  <img
+                    [src]="skill.icon"
+                    [alt]="skill.name"
+                    class="skill-icon"
+                  />
+                  <span>{{ skill.name }}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="links">
+              <a href="">Github</a>
+              <a href="">Live test</a>
+            </div>
+          </div>
+          <div class="img-side-overlay">
+            <button class="close-btn" (click)="closeOverlay()">X</button>
+            <img [src]="selectedProject.image" [alt]="selectedProject.title" />
+            <button class="next-project-btn" (click)="nextProject()">
+              Next Project ->
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

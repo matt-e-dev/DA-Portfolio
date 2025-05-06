@@ -12,40 +12,70 @@
     width:100%;
     margin: 0px 96px;
     color:var(--text-color);
-   
-    .project-card {
-        display: flex;
+
+    .left-right-side-wrapper {
+
+        display:flex;
         justify-content: space-between;
-    
-        
-        .project-card-text {
-            max-width:880px;
-            width:100%;
-            border-top: 2px solid var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            height:104px;
+        align-items: center;
+
+        .left-side-projects-wrapper {
+
             display: flex;
-            align-items: center;
-            justify-content: space-between;;
-            min-width:310px;
+            flex-direction: column;
+
+           
+        .project-card {
+            display: flex;
+            width:880px;
+           
+            .project-card-text {
+                max-width:880px;
+                width:100%;
+                border-top: 2px solid var(--primary-color);
+                border-bottom: 2px solid var(--primary-color);
+                height:104px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;;
+                min-width:310px;
+                
             
-        
-            &:hover  {
-        
-                background-color:  var(--background-color-green);
+                &:hover  {
+            
+                    background-color:  var(--background-color-green);
+                }
+    
+                .arrow-hover {
+    
+                    height:24px;
+                    width:24px;
+                }
+            
             }
-
-            .arrow-hover {
-
-                height:24px;
-                width:24px;
-            }
-        
+        }
+    
         }
 
+    }
+    
+}
+
+.right-side-container {
+
+    height:200px;
+    width:260px;
+
+    
+    
+    .project-card-img {
+
+        height:200px;
+        width:260px;
+
         img {
-            width: 280px;
-            height: 200px;
+            width: 260px;
+            height: 180px;
             transition: transform 0.3s ease; /* Smooth hover effect */
         
             &:hover {
@@ -54,7 +84,10 @@
         }
     }
 
+
 }
+
+
 .overlay {
     position: fixed;
     top: 0;

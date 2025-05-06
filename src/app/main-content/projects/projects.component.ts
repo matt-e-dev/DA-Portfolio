@@ -34,6 +34,11 @@ export class ProjectsComponent {
     skills: { name: string; icon: string }[]; 
   } | null = null;
 
+  selectedProjectIndex: number = 0; 
+
+  changeSelectedProject(index: number): void {
+    this.selectedProjectIndex = index;
+  }
 
   projects = [
     {
@@ -60,7 +65,7 @@ export class ProjectsComponent {
       question: 'What is the project about?',
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       technologies: 'JavaScript | HTML | CSS',
-      image: 'assets/imgs/test1.png',
+      image: 'assets/imgs/test2.png',
       icon: 'assets/icons/el-pollo-loco-icon.svg',
       skills: [
         { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
@@ -68,6 +73,7 @@ export class ProjectsComponent {
         { name: 'CSS', icon: 'assets/icons/projects/css.png' }
       ]
     }
+    
   ];
 
   nextProject(): void {
@@ -110,9 +116,13 @@ export class ProjectsComponent {
   handleMouseOver(projectId: string): void {
     this.toggleImage(projectId, true);
     this.hoverArrows(projectId);
-
   
+    const index = this.projects.findIndex(project => project.id === projectId);
+    if (index !== -1) {
+      this.selectedProjectIndex = index;
+    }
   }
+  
 
 
 }

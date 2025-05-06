@@ -8,26 +8,33 @@
 
         <div class="projects">
 
-            
-
-            <div class="left-side-projects-wrapper">
-                <div 
-                *ngFor="let project of projects" 
-                class="project-card" 
-                (click)="openOverlay(project.id)" 
-                (mouseover)="handleMouseOver(project.id)" 
-                (mouseleave)="handleMouseLeave(project.id)">
-                <div class="project-card-text">
-                  <div class="container-text-large">{{ project.title }}
-                    <img class="arrow-hover d-none" [id]="'arrowHover-' + project.id" src="assets/icons/projects/arrow-hover.png" alt="">
+            <div class="left-right-side-wrapper">
+                <div class="left-side-projects-wrapper">
+                    <div 
+                    *ngFor="let project of projects; let i = index" 
+                    class="project-card" 
+                    (click)="openOverlay(project.id)" 
+                    (mouseover)="handleMouseOver(project.id)" 
+                    (mouseleave)="handleMouseLeave(project.id)">
+                  
+                    <div class="project-card-text">
+                      <div class="container-text-large">{{ project.title }}
+                        <img class="arrow-hover d-none" [id]="'arrowHover-' + project.id" src="assets/icons/projects/arrow-hover.png" alt="">
+                      </div>
+                      <p class="container-text">{{ project.technologies }}</p>
+                    </div>
                   </div>
-                  <p class="container-text">{{ project.technologies }}</p>
                 </div>
-                <div class="project-card-img">
-                  <img class="d-none" [id]="project.id" [src]="project.image" [alt]="project.title">
+              
+                <div class="right-side-container">
+                  <div *ngFor="let project of projects; let i = index">
+                    <div *ngIf="selectedProjectIndex === i" class="project-card-img">
+                      <img [id]="project.id" [src]="project.image" [alt]="project.title">
+                    </div>
+                  </div>
                 </div>
               </div>
-
+              
 
           
                 <div class="overlay" *ngIf="isOverlayOpen">

@@ -63,7 +63,42 @@
     .skills-row {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 16px;
+      align-items: flex-start;
+      gap: 16px;
+
+      .skills {
+        text-align: center;
+        max-width: 120px;
+        flex: 1;
+
+        .skill-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+
+      .growth-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .overlay {
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+          display: none;
+          margin-bottom: 8px;
+        }
+
+        &:hover .overlay {
+          display: block;
+        }
+      }
     }
 
     .skills {
@@ -73,7 +108,7 @@
     }
 
     .skills img {
-      max-width: 100%;
+      max-width: 200px;
       height: auto;
 
       &:hover {

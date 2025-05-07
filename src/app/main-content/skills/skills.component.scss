@@ -101,6 +101,37 @@
       }
     }
 
+        .skills-row-growth-responsive {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .growth-container-responsive {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+
+        > .overlay-responsive {
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+          margin-bottom: 8px;
+
+          img {
+            display: none;
+          }
+        }
+
+        &:hover > .overlay-responsive img {
+          display: block !important;
+        }
+      }
+    }
+
     .skills {
       text-align: center;
       max-width: 120px;

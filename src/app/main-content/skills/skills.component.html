@@ -38,19 +38,19 @@
     </div>
 
     <div class="skills-icons-container">
-      <div class="skills-row">
+      <div class="skills-row" *ngIf="!isSmallScreen">
         <div *ngFor="let skill of skills.slice(0, 4)" class="skills">
           <img [src]="skill.icon" [alt]="skill.name" />
           <p>{{ skill.name }}</p>
         </div>
       </div>
-      <div class="skills-row">
+      <div class="skills-row" *ngIf="!isSmallScreen">
         <div *ngFor="let skill of skills.slice(4, 8)" class="skills">
           <img [src]="skill.icon" [alt]="skill.name" />
           <p>{{ skill.name }}</p>
         </div>
       </div>
-      <div class="skills-row">
+      <div class="skills-row" *ngIf="!isSmallScreen">
         <div *ngFor="let skill of skills.slice(8)" class="skills">
           <div class="skill-container">
             <img
@@ -61,14 +61,64 @@
             <p>{{ skill.name }}</p>
           </div>
         </div>
-
-        <!-- Wrap the Growth icon and overlay in a single container -->
         <div class="skills growth-container">
           <div class="skill-container">
             <img src="assets/icons/growth-mindset.png" alt="Growth Icon" />
             <p>Growth mindset</p>
           </div>
-          <div id="overlay" class="overlay">
+          <div class="overlay">
+            <img src="assets/icons/hover-growth.png" alt="Growth Overlay" />
+          </div>
+        </div>
+      </div>
+
+      <!-- For small screens -->
+      <div class="skills-row" *ngIf="isSmallScreen">
+        <div *ngFor="let skill of skills.slice(0, 3)" class="skills">
+          <img [src]="skill.icon" [alt]="skill.name" />
+          <p>{{ skill.name }}</p>
+        </div>
+      </div>
+      <div class="skills-row" *ngIf="isSmallScreen">
+        <div *ngFor="let skill of skills.slice(3, 6)" class="skills">
+          <img [src]="skill.icon" [alt]="skill.name" />
+          <p>{{ skill.name }}</p>
+        </div>
+      </div>
+      <div class="skills-row" *ngIf="isSmallScreen">
+        <div *ngFor="let skill of skills.slice(6, 9)" class="skills">
+          <div class="skill-container">
+            <img
+              [src]="skill.icon"
+              [alt]="skill.name"
+              (click)="onSkillClick(skill.name)"
+            />
+            <p>{{ skill.name }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="skills-row" *ngIf="isSmallScreen">
+        <div *ngFor="let skill of skills.slice(9, 12)" class="skills">
+          <div class="skill-container">
+            <img
+              [src]="skill.icon"
+              [alt]="skill.name"
+              (click)="onSkillClick(skill.name)"
+            />
+            <p>{{ skill.name }}</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="skills-row-growth-responsive d-none"
+        id="skillsRowGrowthResponsive"
+      >
+        <div class="skills growth-container-responsive">
+          <div class="skill-container">
+            <img src="assets/icons/growth-mindset.png" alt="Growth Icon" />
+            <p>Growth mindset</p>
+          </div>
+          <div class="overlay-responsive">
             <img src="assets/icons/hover-growth.png" alt="Growth Overlay" />
           </div>
         </div>

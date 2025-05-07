@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+
 
 
 @Component({
@@ -7,10 +8,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+  styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-
   skills = [
     { name: 'HTML', icon: 'assets/icons/html.png' },
     { name: 'CSS', icon: 'assets/icons/css.png' },
@@ -23,15 +23,39 @@ export class SkillsComponent {
     { name: 'Rest-API', icon: 'assets/icons/rest-api.png' },
     { name: 'Scrum', icon: 'assets/icons/scrum.png' },
     { name: 'Linux', icon: 'assets/icons/linux.png' },
-    
   ];
 
   onSkillClick(skillName: string): void {
     if (skillName === 'Growth mindset') {
-       let overlayRef = document.getElementById('overlay');
-       overlayRef?.classList.toggle('d-none');
-
+      let overlayRef = document.getElementById('overlay');
+      overlayRef?.classList.toggle('d-none');
     }
-}
+  }
 
+  isSmallScreen = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.isSmallScreen = window.innerWidth <= 600;
+    let responsiveRef = document.getElementById('skillsRowGrowthResponsive');
+    if (responsiveRef) {
+      if (this.isSmallScreen) {
+        responsiveRef.classList.remove('d-none'); 
+      } else {
+        responsiveRef.classList.add('d-none'); 
+      }
+    }
+  }
+
+  ngOnInit(): void {
+    this.isSmallScreen = window.innerWidth <= 600;
+    let responsiveRef = document.getElementById('skillsRowGrowthResponsive');
+    if (responsiveRef) {
+      if (this.isSmallScreen) {
+        responsiveRef.classList.remove('d-none'); 
+      } else {
+        responsiveRef.classList.add('d-none'); 
+      }
+    }
+  }
 }

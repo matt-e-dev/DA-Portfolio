@@ -9,7 +9,6 @@
     var(--background-color-black),
     var(--background-color-green)
   );
-    
 }
 
 .above-the-fold-content {
@@ -18,9 +17,6 @@
   display: flex;
   justify-content: space-between;
   height: 100vh;
- 
-
-  
 
   .header-text {
     display: flex;
@@ -54,10 +50,17 @@
     align-items: center;
     gap: 24px;
     padding-top: 360px;
-   
 
     @media (max-width: 1100px) {
       padding-top: 580px;
+    }
+
+    .mail-icon {
+
+      display:none;
+      @media (max-width: 1100px) {
+        display: block;
+      }
     }
 
     .email-sideways {
@@ -72,12 +75,19 @@
         transform: scale(1.1);
         color: var(--primary-color);
       }
+      @media (max-width: 1100px) {
+        display: none;
+      }
     }
 
     > .deco-line-right {
       width: 2px;
       height: 90px;
       background-color: var(--text-color);
+
+      @media (max-width: 1100px) {
+        height:120px;
+      }
     }
 
     img {
@@ -175,7 +185,6 @@
 @media (max-width: 1100px) {
   .email-sideways {
     display: none;
-   
   }
 
   .right-side-content-above-the-fold {

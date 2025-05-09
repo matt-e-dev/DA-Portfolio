@@ -1,15 +1,18 @@
 <div id="projects" class="projects-wrapper">
   <div class="projects-content">
-    <h3 class="container-headers --primary-color">Portfolio</h3>
-    <h2 class="container-headers-inside --primary-color">Featured Projects</h2>
-    <p class="container-text">
-      Explore a selection of my work here - Interact with projects to see my
-      skills in action.
-    </p>
-
     <div class="projects">
       <div class="left-right-side-wrapper">
         <div class="left-side-projects-wrapper">
+          <div class="projects-header-txt">
+            <h3 class="container-headers --primary-color">Portfolio</h3>
+            <h2 class="container-headers-inside --primary-color">
+              Featured Projects
+            </h2>
+            <p class="container-text">
+              Explore a selection of my work here - Interact with projects to
+              see my skills in action.
+            </p>
+          </div>
           <div
             *ngFor="let project of projects; let i = index"
             class="project-card"

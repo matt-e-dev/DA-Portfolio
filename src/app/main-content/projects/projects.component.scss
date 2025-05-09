@@ -16,13 +16,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    @media (max-width: 1360px) {
+
+     @media (max-width: 1360px) {
       flex-direction: column;
       align-items: center;
      
     }
-
+   
     .left-side-projects-wrapper {
       display: flex;
       flex-direction: column;

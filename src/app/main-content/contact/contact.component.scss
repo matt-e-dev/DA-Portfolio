@@ -100,6 +100,11 @@
         }
       }
 
+      @media (max-width: 600px) {
+         display: flex;
+        flex-direction: column;
+      }
+
       a {
         margin: 8px;
       }

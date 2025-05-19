@@ -77,11 +77,14 @@
               <a href="">Github</a>
               <a href="">Live test</a>
             </div>
+            <button class="next-project-btn-responsive" (click)="nextProject()">
+              Next Project ->
+            </button>
           </div>
           <div class="img-side-overlay">
             <button class="close-btn" (click)="closeOverlay()">X</button>
             <img [src]="selectedProject.image" [alt]="selectedProject.title" />
-            <button class="next-project-btn" (click)="nextProject()">
+            <button class="next-project-btn-default" (click)="nextProject()">
               Next Project ->
             </button>
           </div>

@@ -116,6 +116,50 @@
   align-items: center;
   z-index: 1000;
   color: white;
+  
+ 
+
+  .overlay-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    background-color: rgba(28, 28, 28, 0.8);
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+
+    @media (max-width: 1000px) {
+      flex-direction: column-reverse; 
+      width: 600px;
+      height: auto;
+
+      img {
+        width: 360px;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--primary-color);
+        transform: scale(1.3);
+      }
+    }
+  }
 }
 
 .overlay-content {
@@ -126,6 +170,8 @@
   max-width: 1200px;
   width: 100%;
   display: flex;
+  transition: top 250ms;
+    
 
   > .img-side-overlay {
     display: flex;
@@ -146,13 +192,34 @@
     padding-right: 24px;
   }
 
-  .next-project-btn {
+  .next-project-btn-responsive{
     color: var(--primary-color);
     font-size: var(--font-size-text-large);
     cursor: pointer;
     text-decoration: none;
     background: none;
     border: none;
+    display:none;
+
+    @media (max-width: 1000px) {
+      display: block;
+      
+    }
+  }
+
+  .next-project-btn-default{
+    color: var(--primary-color);
+    font-size: var(--font-size-text-large);
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    border: none;
+    display:block;
+
+    @media (max-width: 1000px) {
+      display: none;
+      
+    }
   }
 
   .close-btn:hover {

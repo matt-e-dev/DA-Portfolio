@@ -51,11 +51,11 @@ export class ProjectsComponent {
       image: 'assets/imgs/test1.png',
       icon: 'assets/icons/join-icon.svg',
       skills: [
-        { name: 'Angular', icon: 'assets/icons/projects/angular.svg' },
-        { name: 'TypeScript', icon: 'assets/icons/projects/typescript.svg' },
-        { name: 'HTML', icon: 'assets/icons/projects/html.svg' },
-        { name: 'CSS', icon: 'assets/icons/projects/css.svg' },
-        { name: 'Firebase', icon: 'assets/icons/projects/firebase.svg' },
+        { name: 'Angular', icon: 'assets/icons/projects/angular.png' },
+        { name: 'TypeScript', icon: 'assets/icons/projects/typescript.png' },
+        { name: 'HTML', icon: 'assets/icons/projects/html.png' },
+        { name: 'CSS', icon: 'assets/icons/projects/css.png' },
+        { name: 'Firebase', icon: 'assets/icons/projects/firebase.png' },
       ],
     },
     {

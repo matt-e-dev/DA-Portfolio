@@ -60,15 +60,19 @@ body {
     --font-size-text-large: 1.5rem; /* 24px */
     --container-headers: 1.5rem; /* 24px */
     --container-headers-inside: 4rem; /* 64px */
+    --font-size-h2: 4rem; /* 64px */
     --font-size-h1: 8rem; /* 128px */
+    --font-size-projects-name-header: 4rem; /* 64px */
+    --font-size-count: 8rem; /* 128px */
 
     --font-size-text-small-responsive: 0.875rem; /* 14px */
     --font-size-text-normal-responsive: 1rem; /* 16px */
     --font-size-text-large-responsive: 1.25rem; /* 20px */
     --container-headers-responsive: 1.125rem; /* 18px */
     --container-headers-inside-responsive: 2.5rem;
-    --font-size-h2: 4rem; /* 64px */
-    --font-size-h1: 8rem; /* 128px */
+    --font-size-projects-name-header-responsive: 3.5rem; /* 56px */
+    --font-size-count-responsive: 4.5rem; /* 72px */
+
 
     /*CSS variables for font-weight */
     --font-weight-light:400;
@@ -76,6 +80,7 @@ body {
 
     
 }
+
 
 .d-none {
     display: none !important;
@@ -98,6 +103,8 @@ a {
 .--primary-color {
     color: var(--primary-color) !important;
 }
+
+
 
 
 .container-headers {
@@ -135,6 +142,20 @@ a {
     color: var(--text-color);
     font-family: 'FiraCode';
 }
+
+.projects-count-headers {
+    font-size: clamp(var(--font-size-count-responsive), 8vw, var(--font-size-count));
+    margin: 0;
+    margin-top: 24px;
+  }
+
+.projects-title-headers {
+font-size: clamp(var(--font-size-projects-name-header-responsive), 5vw, var(--font-size-projects-name-header));
+font-weight: var(--font-weight-normal);
+font-family: 'FiraCode';
+margin: 0;
+}
+
 
 .main-btns {
     color: var(--text-color);

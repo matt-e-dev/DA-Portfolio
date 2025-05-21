@@ -147,6 +147,14 @@
   
   }
 
+  @media (max-width: 500px) {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    margin:0px;
+    
+  }
+
 }
 
 .description-side-overlay {
@@ -240,6 +248,10 @@
     margin: 0;
     color: var(--primary-color);
     margin: 32px 0;
+
+    @media (max-width: 500px) {
+      margin:4px;
+    }
   }
 
   .links {

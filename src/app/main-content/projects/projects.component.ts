@@ -52,7 +52,7 @@ export class ProjectsComponent {
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
       image: 'assets/imgs/test1.png',
       icon: 'assets/icons/join-icon.svg',
-      github: '',
+      github: 'https://github.com/KonstantinStark/join',
       link: 'assets/join/pages/login.html',
 
       skills: [
@@ -72,7 +72,7 @@ export class ProjectsComponent {
         'Project based on the Pokemon API. Search for your favorite Pokemon and see its stats, abilities and types.',
       technologies: 'JavaScript | HTML | CSS | API',
       image: 'assets/imgs/test2.png',
-      github: '',
+      github: 'https://github.com/matt-e-dev/Pokemon',
       link: 'assets/pokemon/index.html',
       skills: [
         { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },

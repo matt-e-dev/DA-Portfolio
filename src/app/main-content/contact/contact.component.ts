@@ -10,7 +10,6 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-
   http = inject(HttpClient);
 
   contactData = {
@@ -22,7 +21,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://matthias-e-portfolio/sendMail.php',
+    endPoint: 'https://matthias-e-portfolio.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

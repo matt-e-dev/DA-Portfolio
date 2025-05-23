@@ -1,9 +1,3 @@
-.contact-form {
-
-  display: flex;
-  flex-direction: column;
-}
-
 
 .contact-wrapper {
   display: flex;
@@ -45,34 +39,58 @@
     width: 100%;
     margin-top: 16px;
 
-    > .help-container {
-      border-bottom: 1px solid var(--primary-color);
-      padding-bottom: 24px;
-    }
+    .contact-form {
 
-    > .name-container,
-    .email-container,
-    .help-container {
-      border-top: 2px solid var(--primary-color);
-      margin-bottom: 48px;
-      padding-left: 48px;
+      display:flex;
+      flex-direction: column;
 
-      @media (max-width: 600px) {
-        padding-left: 0px;
+      > .name-contact-form,
+      .email-contact-form,
+      .message-contact-form{
+        display: flex;
+        flex-direction: column;
+        border-top: 2px solid var(--primary-color);
+        margin-bottom: 48px;
+        padding-left: 48px;
+
+        @media (max-width: 600px) {
+          padding-left: 0px;
+        }
       }
 
-      > .contact-secondary-headlines {
-        font-size: var(--font-size-navbar);
-        color: var(--primary-color);
-      }
-    }
-    .input-txt {
-      all: unset;
-      font-family: "Karla";
-    }
 
-    input::placeholder {
-      color: white;
+      input {
+
+        all:unset;
+        color:white;;
+        
+      }
+
+      input::placeholder {
+
+        all:unset;
+        color:white;;
+        
+      }
+
+      textarea {
+
+        all:unset;
+        color:white;;
+      }
+
+      textarea::placeholder {
+
+        all:unset;
+        color:white;;
+        
+      }
+
+      span {
+
+        color:red;
+      }
+      
     }
 
     .checkbox-container {

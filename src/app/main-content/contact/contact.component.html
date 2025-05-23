@@ -20,30 +20,36 @@
     <div class="contact-container">
 
       <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-        <label for="name">First Name</label>
-        <input #name = "ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required />
-        @if (!name.valid && name.touched){
+        <div class="name-contact-form">
+            <label class="container-text-large --primary-color" for="name">what's youre name?</label>
+            <input #name = "ngModel" [(ngModel)]="contactData.name"  type="text" id="name" name="name" placeholder="your name goes here" required />
+            @if (!name.valid && name.touched){
 
-          <span>name please</span>
-  
-         }
+              <span>name please</span>
       
-        <label for="email">Last Name</label>
-        <input #email = "ngModel"[(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your mail.." required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
-        @if (!email.valid && email.touched){
-
-          <span>email please</span>
-  
-         }
+            }
+        </div>
+        <div class="email-contact-form">
       
-        <label for="message">Subject</label>
-        <textarea #message = "ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something..." required ></textarea>
-       @if (!message.valid && message.touched){
+            <label class="container-text-large --primary-color" for="email">what's youre e-mail?</label>
+            <input #email = "ngModel"[(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youre.email@enterhere.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+            @if (!email.valid && email.touched){
 
-        <span>lul</span>
+              <span>email please</span>
+      
+            }
+        </div>
+        <div class="message-contact-form">
+          
+            <label class="container-text-large --primary-color" for="message">How can I help you?</label>
+            <textarea #message = "ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="hello my name is Matthias, I'm interested in" required ></textarea>
+            @if (!message.valid && message.touched){
 
-       }
-        <input type="submit" value="Submit" />
+              <span>lul</span>
+
+          }
+         </div>
+          <input type="submit" value="Submit"  />
       </form>
     </div>
 

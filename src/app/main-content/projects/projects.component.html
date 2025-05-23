@@ -51,7 +51,9 @@
       <div class="overlay" *ngIf="isOverlayOpen">
         <div class="overlay-content" *ngIf="selectedProject">
           <div class="description-side-overlay">
-            <h2 class="projects-count-headers --primary-color">{{ selectedProject.count }}</h2>
+            <h2 class="projects-count-headers --primary-color">
+              {{ selectedProject.count }}
+            </h2>
             <h3 class="projects-title-headers">{{ selectedProject.title }}</h3>
             <h4 class="question">{{ selectedProject.question }}</h4>
             <p class="description container-text">
@@ -74,8 +76,23 @@
             </div>
 
             <div class="links">
-              <a class="main-btns" href="">Github</a>
-              <a class="main-btns" href="">Live test</a>
+              <a
+                class="main-btns"
+                [href]="selectedProject.link"
+                target="_blank"
+                rel="noopener"
+              >
+                livetest
+              </a>
+
+              <a
+              class="main-btns"
+              [href]=""
+              target="_blank"
+              rel="noopener"
+            >
+              github
+            </a>
             </div>
             <button class="next-project-btn-responsive" (click)="nextProject()">
               Next Project <span>&#8594;</span>
@@ -83,8 +100,8 @@
           </div>
           <div class="img-side-overlay">
             <div class="close-btn-wrapper">
-            <button class="close-btn" (click)="closeOverlay()">X</button>
-          </div>
+              <button class="close-btn" (click)="closeOverlay()">X</button>
+            </div>
             <img [src]="selectedProject.image" [alt]="selectedProject.title" />
             <button class="next-project-btn-default" (click)="nextProject()">
               Next Project <span>&#8594;</span>

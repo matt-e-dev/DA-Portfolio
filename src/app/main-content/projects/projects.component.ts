@@ -30,6 +30,8 @@ export class ProjectsComponent {
     description: string;
     technologies: string;
     image: string;
+    link: string;
+    github: string;
     skills: { name: string; icon: string }[];
   } | null = null;
 
@@ -50,6 +52,9 @@ export class ProjectsComponent {
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
       image: 'assets/imgs/test1.png',
       icon: 'assets/icons/join-icon.svg',
+      github: '',
+      link: 'assets/join/pages/login.html',
+
       skills: [
         { name: 'Angular', icon: 'assets/icons/projects/angular.png' },
         { name: 'TypeScript', icon: 'assets/icons/projects/typescript.png' },
@@ -59,21 +64,38 @@ export class ProjectsComponent {
       ],
     },
     {
-      id: 'elPolloLoco',
+      id: 'Pokemon',
       count: '02',
-      title: 'El Pollo Loco',
+      title: 'Pokemon',
       question: 'What is the project about?',
       description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      technologies: 'JavaScript | HTML | CSS',
+        'Project based on the Pokemon API. Search for your favorite Pokemon and see its stats, abilities and types.',
+      technologies: 'JavaScript | HTML | CSS | API',
       image: 'assets/imgs/test2.png',
-      icon: 'assets/icons/el-pollo-loco-icon.svg',
+      github: '',
+      link: 'assets/pokemon/index.html',
       skills: [
         { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
         { name: 'HTML', icon: 'assets/icons/projects/html.png' },
         { name: 'CSS', icon: 'assets/icons/projects/css.png' },
       ],
     },
+    // {
+    //   id: 'elPolloLoco',
+    //   count: '03',
+    //   title: 'El Pollo Loco',
+    //   question: 'What is the project about?',
+    //   description:
+    //     'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+    //   technologies: 'JavaScript | HTML | CSS | OOP',
+    //   image: 'assets/imgs/test2.png',
+    //   link: 'assets/pokemon/index.html',
+    //   skills: [
+    //     { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
+    //     { name: 'HTML', icon: 'assets/icons/projects/html.png' },
+    //     { name: 'CSS', icon: 'assets/icons/projects/css.png' },
+    //   ],
+    // },
   ];
 
   nextProject(): void {

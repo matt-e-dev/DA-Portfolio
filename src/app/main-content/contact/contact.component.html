@@ -25,7 +25,7 @@
             <input #name = "ngModel" [(ngModel)]="contactData.name"  type="text" id="name" name="name" placeholder="your name goes here" required />
             @if (!name.valid && name.touched){
 
-              <span>name please</span>
+              <span>enter name please</span>
       
             }
         </div>
@@ -35,7 +35,7 @@
             <input #email = "ngModel"[(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="youre.email@enterhere.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
             @if (!email.valid && email.touched){
 
-              <span>email please</span>
+              <span>enter email please</span>
       
             }
         </div>
@@ -45,7 +45,7 @@
             <textarea #message = "ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="hello my name is Matthias, I'm interested in" required ></textarea>
             @if (!message.valid && message.touched){
 
-              <span>lul</span>
+              <span>enter message please</span>
 
           }
          </div>

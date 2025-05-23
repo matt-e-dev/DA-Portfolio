@@ -18,6 +18,36 @@
     </div>
 
     <div class="contact-container">
+
+      <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <label for="name">First Name</label>
+        <input #name = "ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name.." required />
+        @if (!name.valid && name.touched){
+
+          <span>name please</span>
+  
+         }
+      
+        <label for="email">Last Name</label>
+        <input #email = "ngModel"[(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your mail.." required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+        @if (!email.valid && email.touched){
+
+          <span>email please</span>
+  
+         }
+      
+        <label for="message">Subject</label>
+        <textarea #message = "ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Write something..." required ></textarea>
+       @if (!message.valid && message.touched){
+
+        <span>lul</span>
+
+       }
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <!-- <div class="contact-container">
       <div class="name-container">
         <p class="container-text-large --primary-color">What your name?</p>
         <input
@@ -56,6 +86,6 @@
       <div class="hello-container">
         <button class="main-btns">Say Hello :)</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>

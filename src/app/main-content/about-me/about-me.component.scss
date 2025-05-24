@@ -25,13 +25,28 @@
 }
 
   .left-side-container {
-    height: clamp(300px, 40vw, 560px); /* Dynamically adjust height */
-    width: clamp(300px, 40vw, 560px); /* Keep width proportional to height */
+    height: clamp(300px, 40vw, 560px); 
+    width: clamp(300px, 40vw, 560px); 
     max-width: 560px;
     min-width: 300px;
-    border: 2px solid var(--primary-color);
     border-radius: 16px;
     position: relative;
+
+    .picture-container {
+
+      height: clamp(300px, 40vw, 560px); 
+      width: clamp(300px, 40vw, 560px); 
+      z-index:1000;
+      position:relative;
+
+      img { 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
 
     .picture-deco-container {
       width: 105%;

@@ -109,6 +109,7 @@
   align-items: center;
   z-index: 1000;
   color: white;
+  overflow: auto; 
 
   .overlay-content {
     position: relative;
@@ -126,6 +127,8 @@
     width: 100%;
     border-radius: 8px;
     margin: 16px;
+    overflow: auto; 
+   
 
     @media (max-width: 1000px) {
       flex-direction: column-reverse;
@@ -134,7 +137,8 @@
     }
 
     @media (max-width: 500px) {
-      max-height: 90vh;
+      max-height: 80vh;
+     
     }
   }
 

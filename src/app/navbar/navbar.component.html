@@ -1,13 +1,13 @@
 <div class="navbar-wrapper">
   <div class="navbar">
     <nav class="navbar-container">
-      <!-- <div class="toggle-button navbar-before-responsive">
-        <button class="toggle-option active">EN</button>
-        <button class="toggle-option">DE</button>
-      </div> -->
-      <a class="container-text-large navbar-before-responsive" href="#about-me">About Me</a >
-      <a class="container-text-large navbar-before-responsive" href="#skills" >Skills</a >
-      <a class="container-text-large navbar-before-responsive" href="#projects">Projects</a>
+            <div class="toggle-button navbar-before-responsive">
+        <button class="toggle-option active" (click)="switchLanguage('en')">EN</button>
+        <button class="toggle-option" (click)="switchLanguage('de')">DE</button>
+      </div>
+      <a class="container-text-large navbar-before-responsive" href="#about-me">{{ 'navigation.about' | translate }}</a>
+      <a class="container-text-large navbar-before-responsive" href="#skills">{{ 'navigation.skills' | translate }}</a>
+      <a class="container-text-large navbar-before-responsive" href="#projects">{{ 'navigation.projects' | translate }}</a>
 
       <div class="navbar-burger-menu-overlay-wrapper">
         <img
@@ -23,9 +23,9 @@
               <span (click)="toggleOverlay()">X</span>
             </div>
             <div class="navbar-overlay-links">
-              <a class="container-text-large" href="#about-me">About Me</a>
-              <a class="container-text-large" href="#skills">Skills</a>
-              <a class="container-text-large" href="#projects">Projects</a>
+              <a class="container-text-large" href="#about-me">{{ 'navigation.about' | translate }}</a>
+              <a class="container-text-large" href="#skills">{{ 'navigation.skills' | translate }}</a>
+              <a class="container-text-large" href="#projects">{{ 'navigation.projects' | translate }}</a>
               <!-- <div class="toggle-button">
                 <button class="toggle-option active">EN</button>
                 <button class="toggle-option">DE</button>

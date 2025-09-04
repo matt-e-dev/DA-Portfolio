@@ -1,13 +1,17 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements AfterViewInit {
+  currentLanguage = 'en';
+
+  constructor(private translate: TranslateService) {}
 
   //Imported from afterviewinit component
 
@@ -21,12 +25,11 @@ export class NavbarComponent implements AfterViewInit {
     mouthElement?.classList.remove('d-none');
     handElement?.classList.remove('d-none');
 
-   
     setTimeout(() => {
       logoElement?.classList.remove('hovered');
       mouthElement?.classList.add('d-none');
       handElement?.classList.add('d-none');
-    }, 2000); 
+    }, 2000);
   }
 
   handleLogoHover(): void {
@@ -47,6 +50,20 @@ export class NavbarComponent implements AfterViewInit {
 
   toggleOverlay(): void {
     const overlay = document.getElementById('navbarOverlay');
-    overlay?.classList.toggle('d-none'); // 
+    overlay?.classList.toggle('d-none'); //
+  }
+
+  switchLanguage(language: string): void {
+    this.currentLanguage = language;
+    this.translate.use(language);
+
+    // Update active button styling
+    const buttons = document.querySelectorAll('.toggle-option');
+    buttons.forEach((button) => button.classList.remove('active'));
+
+    const activeButton = document.querySelector(
+      `.toggle-option:nth-child(${language === 'en' ? '1' : '2'})`
+    );
+    activeButton?.classList.add('active');
   }
 }

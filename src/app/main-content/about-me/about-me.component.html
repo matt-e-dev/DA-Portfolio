@@ -9,41 +9,27 @@
     </div>
 
     <div class="info-container-wrapper">
-      <p class="container-headers --primary-color">Who I am</p>
+      <p class="container-headers --primary-color">{{ 'aboutMe.title' | translate }}</p>
       <div class="info-container">
-        <h2 class="container-headers-inside --primary-color">About Me</h2>
+        <h2 class="container-headers-inside --primary-color">{{ 'aboutMe.subtitle' | translate }}</h2>
 
         <p class="container-text">
-          After completing my Umschulung in E-Commerce Management, 
-          including my IHK exam, I decided to expand my expertise and immerse myself in the world of coding. <br> <br>
-          During my college time, I regularly joined the programmers’ group in the afternoons to learn and practice coding, 
-          which further fueled my motivation to pursue web development more seriously. To build on this foundation,
-           I joined Developer Akademie, where I recently completed a comprehensive frontend development training program.
-
-
+          {{ 'aboutMe.description' | translate }} <br> <br>
+          {{ 'aboutMe.description2' | translate }}
         </p>
         <div class="container-text-small">
           <div class="info-container-text">
             <span><img src="assets/icons/about-me/location.png" alt="" /></span>
-            <span
-              >Based in Berlin, open to remote work opportunities.</span
-            >
+            <span>{{ 'aboutMe.location' | translate }}</span>
           </div>
           <div class="info-container-text">
-            <span
-              ><img src="assets/icons/about-me/cognition.png" alt=""
-            /></span>
-            <span
-              >Happy to push my boundaries and embrace new challenges.</span
-            >
+            <span><img src="assets/icons/about-me/cognition.png" alt="" /></span>
+            <span>{{ 'aboutMe.mindset' | translate }}</span>
           </div>
           <div class="info-container-text">
             <span><img src="assets/icons/about-me/check.png" alt="" /></span>
-            <span
-              >During the intense frontend development program, I quickly realized that to push beyond my limitations, I needed a structured way to absorb and retain new knowledge. That’s why I developed a personal note-taking system, helping me organize concepts, track solutions, and reflect on what I’ve learned. 
-              This method not only strengthened my understanding but also made me more efficient in tackling complex problems. <br><br>
-              Check my blog entry here:</span
-            >
+            <span>{{ 'aboutMe.learning' | translate }} <br><br>
+              {{ 'aboutMe.blogEntry' | translate }}</span>
           </div>
         </div>
       </div>

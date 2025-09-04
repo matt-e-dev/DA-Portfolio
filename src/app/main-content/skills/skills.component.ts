@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-
-
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
@@ -40,9 +39,9 @@ export class SkillsComponent {
     let responsiveRef = document.getElementById('skillsRowGrowthResponsive');
     if (responsiveRef) {
       if (this.isSmallScreen) {
-        responsiveRef.classList.remove('d-none'); 
+        responsiveRef.classList.remove('d-none');
       } else {
-        responsiveRef.classList.add('d-none'); 
+        responsiveRef.classList.add('d-none');
       }
     }
   }
@@ -52,9 +51,9 @@ export class SkillsComponent {
     let responsiveRef = document.getElementById('skillsRowGrowthResponsive');
     if (responsiveRef) {
       if (this.isSmallScreen) {
-        responsiveRef.classList.remove('d-none'); 
+        responsiveRef.classList.remove('d-none');
       } else {
-        responsiveRef.classList.add('d-none'); 
+        responsiveRef.classList.add('d-none');
       }
     }
   }

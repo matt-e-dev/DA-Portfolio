@@ -1,42 +1,36 @@
 <div id="skills" class="skills-wrapper">
   <div class="skills-content">
     <div class="text-container-wrapper">
-      <p class="container-headers --primary-color">Technologies</p>
+      <p class="container-headers --primary-color">{{ 'skills.title' | translate }}</p>
 
       <div class="skills-text-container">
-        <h2 class="container-headers-inside --primary-color">Skill Set</h2>
+        <h2 class="container-headers-inside --primary-color">{{ 'skills.subtitle' | translate }}</h2>
         <p class="container-text">
-          Through my training in frontend development at Developer Akademie,
-           I gained practical experience with core technologies such as HTML, CSS, JavaScript, and Angular, along with tools like version control (Git/GitHub)
-            and responsive design best practices. I enjoy building user-friendly and visually appealing interfaces that bring ideas to life. <br> <br>
+          {{ 'skills.description' | translate }} <br> <br>
 
-          At the same time, I understand how quickly the web development landscape evolves, 
-          so I make it a priority to continually learn and adapt — whether that’s diving deeper into modern frameworks, 
-          exploring new frontend tools, or improving my workflow. Staying curious and open-minded helps me not only keep up with rapid changes 
-          in the industry but also grow into a more versatile developer.
+          {{ 'skills.description2' | translate }}
         </p>
-        <span class="skills-container-text-large extra-white-space">You</span>
+        <span class="skills-container-text-large extra-white-space">{{ 'skills.needSkill.you' | translate }}</span>
         <span
           class="skills-container-text-large --primary-color extra-white-space"
-          >need</span
+          >{{ 'skills.needSkill.need' | translate }}</span
         >
         <span class="skills-container-text-large extra-white-space"
-          >another</span
+          >{{ 'skills.needSkill.another' | translate }}</span
         >
         <span
           class="skills-container-text-large --primary-color extra-white-space"
-          >skill</span
+          >{{ 'skills.needSkill.skill' | translate }}</span
         >
         <span
           class="skills-container-text-large --primary-color extra-white-space"
-          >?</span
+          >{{ 'skills.needSkill.question' | translate }}</span
         >
         <p class="skills-contact-p container-text-small">
-          Feel free to contact me. I look forward to expanding on my previous
-          knowledge.
+          {{ 'skills.contactText' | translate }}
         </p>
         <button class="main-btns">
-          <a href="#contact"><span>Let's talk</span></a>
+          <a href="#contact"><span>{{ 'skills.letsTalk' | translate }}</span></a>
         </button>
       </div>
     </div>

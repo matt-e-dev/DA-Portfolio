@@ -21,7 +21,7 @@
         <div class="name-contact-form">
             <label class="container-text-large --primary-color" for="name">{{ "contact.nameQuestion" | translate }}</label>
             <input #name = "ngModel" [(ngModel)]="contactData.name"  type="text" id="name" name="name" placeholder="{{ 'contact.namePlaceholder' | translate }}" required />
-            @if (!name.valid && name.touched){
+            @if (!name.valid && (name.touched || contactForm.submitted)){
 
               <span>{{ "contact.nameError" | translate }}</span>
       
@@ -31,7 +31,7 @@
       
             <label class="container-text-large --primary-color" for="email">{{ "contact.emailQuestion" | translate }}</label>
             <input #email = "ngModel"[(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{ 'contact.emailPlaceholder' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
-            @if (!email.valid && email.touched){
+            @if (!email.valid && (email.touched || contactForm.submitted)){
 
               <span>{{ "contact.emailError" | translate }}</span>
       
@@ -41,55 +41,18 @@
           
             <label class="container-text-large --primary-color" for="message">{{ "contact.helpQuestion" | translate }}</label>
             <textarea #message = "ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{ 'contact.messagePlaceholder' | translate }}" required ></textarea>
-            @if (!message.valid && message.touched){
+            @if (!message.valid && (message.touched || contactForm.submitted)){
 
               <span>{{ "contact.messageError" | translate }}</span>
 
           }
          </div>
-          <input class="--primary-color" type="submit" value="{{ 'contact.submit' | translate }}"  />
+      
+
+            <input class="--primary-color" type="submit" value="{{ 'contact.submit' | translate }}"  />
+
       </form>
     </div>
 
-    <!-- <div class="contact-container">
-      <div class="name-container">
-        <p class="container-text-large --primary-color">What your name?</p>
-        <input
-          class="input-txt"
-          type="text"
-          placeholder="your name goes here"
-        />
-      </div>
-
-      <div class="email-container">
-        <p class="container-text-large --primary-color">Whats your email?</p>
-        <input
-          class="input-txt"
-          type="text"
-          placeholder="youre.email@enterhere.com"
-        />
-      </div>
-
-      <div class="help-container">
-        <p class="container-text-large --primary-color">How can I help you?</p>
-        <input
-          class="input-txt"
-          type="text"
-          placeholder="hello my name is Matthias, I'm interested in"
-        />
-      </div>
-
-      <div class="checkbox-container">
-        <input type="checkbox" class="checkbox" id="checkbox" name="checkbox" />
-        <label for="checkbox">
-          I agree to the
-          <a class="container-text-small --primary-color" href="#">privacy policy</a></label >
-          <p>and agree to the processing of my data as outlined.</p>
-      </div>
-
-      <div class="hello-container">
-        <button class="main-btns">Say Hello :)</button>
-      </div>
-    </div> -->
   </div>
 </div>

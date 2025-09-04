@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  constructor(private translate: TranslateService) {}
   toggleImage(projectId: string, show: boolean): void {
     const element = document.getElementById(projectId);
     if (element) {
@@ -46,9 +48,8 @@ export class ProjectsComponent {
       id: 'join',
       count: '01',
       title: 'JOIN',
-      question: 'What is the project about?',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      question: 'projects.join.question',
+      description: 'projects.join.description',
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
       image: 'assets/imgs/test1.png',
       icon: 'assets/icons/join-icon.svg',
@@ -67,9 +68,8 @@ export class ProjectsComponent {
       id: 'Pokemon',
       count: '02',
       title: 'Pokemon',
-      question: 'What is the project about?',
-      description:
-        'Project based on the Pokemon API. Search for your favorite Pokemon and see its stats, abilities and types.',
+      question: 'projects.pokemon.question',
+      description: 'projects.pokemon.description',
       technologies: 'JavaScript | HTML | CSS | API',
       image: 'assets/imgs/test2.png',
       github: 'https://github.com/matt-e-dev/Pokemon',

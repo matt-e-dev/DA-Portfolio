@@ -62,6 +62,25 @@ export class AppComponent {
           'Feel free to contact me. I look forward to expanding on my previous knowledge.',
         letsTalk: "Let's talk",
       },
+      projects: {
+        portfolio: 'Portfolio',
+        featuredProjects: 'Featured Projects',
+        description:
+          'Explore a selection of my work here - Interact with projects to see my skills in action.',
+        livetest: 'Live Test',
+        github: 'GitHub',
+        nextProject: 'Next Project',
+        join: {
+          question: 'What is the project about?',
+          description:
+            'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        },
+        pokemon: {
+          question: 'What is the project about?',
+          description:
+            'Project based on the Pokemon API. Search for your favorite Pokemon and see its stats, abilities and types.',
+        },
+      },
     });
 
     translate.setTranslation('de', {
@@ -101,6 +120,25 @@ export class AppComponent {
         contactText:
           'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
         letsTalk: 'Sprechen wir',
+      },
+      projects: {
+        portfolio: 'Portfolio',
+        featuredProjects: 'Ausgewählte Projekte',
+        description:
+          'Entdecken Sie eine Auswahl meiner Arbeiten hier - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.',
+        livetest: 'Live Test',
+        github: 'GitHub',
+        nextProject: 'Nächstes Projekt',
+        join: {
+          question: 'Worum geht es bei dem Projekt?',
+          description:
+            'Task Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
+        },
+        pokemon: {
+          question: 'Worum geht es bei dem Projekt?',
+          description:
+            'Projekt basierend auf der Pokemon API. Suchen Sie nach Ihrem Lieblings-Pokemon und sehen Sie seine Statistiken, Fähigkeiten und Typen.',
+        },
       },
     });
 

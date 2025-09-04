@@ -4,13 +4,12 @@
       <div class="left-right-side-wrapper">
         <div class="left-side-projects-wrapper">
           <div class="projects-header-txt">
-            <h3 class="container-headers --primary-color">Portfolio</h3>
+            <h3 class="container-headers --primary-color">{{ "projects.portfolio" | translate }}</h3>
             <h2 class="container-headers-inside --primary-color">
-              Featured Projects
+              {{ "projects.featuredProjects" | translate }}
             </h2>
             <p class="container-text">
-              Explore a selection of my work here - Interact with projects to
-              see my skills in action.
+              {{ "projects.description" | translate }}
             </p>
           </div>
           <div
@@ -55,9 +54,9 @@
               {{ selectedProject.count }}
             </h2>
             <h3 class="projects-title-headers">{{ selectedProject.title }}</h3>
-            <h4 class="question">{{ selectedProject.question }}</h4>
+            <h4 class="question">{{ selectedProject.question | translate }}</h4>
             <p class="description container-text">
-              {{ selectedProject.description }}
+              {{ selectedProject.description | translate }}
             </p>
             <div class="skills-section">
               <div class="skills-list container-text-small">
@@ -82,7 +81,7 @@
                 target="_blank"
                 rel="noopener"
               >
-                livetest
+                {{ "projects.livetest" | translate }}
               </a>
 
               <a
@@ -91,12 +90,12 @@
               target="_blank"
               rel="noopener"
             >
-              github
+              {{ "projects.github" | translate }}
             </a>
 
             </div>
             <button class="next-project-btn-responsive" (click)="nextProject()">
-              Next Project <span>&#8594;</span>
+              {{ "projects.nextProject" | translate }} <span>&#8594;</span>
             </button>
           </div>
           <div class="img-side-overlay">
@@ -105,7 +104,7 @@
             </div>
             <img [src]="selectedProject.image" [alt]="selectedProject.title" />
             <button class="next-project-btn-default" (click)="nextProject()">
-              Next Project <span>&#8594;</span>
+              {{ "projects.nextProject" | translate }} <span>&#8594;</span>
             </button>
           </div>
         </div>

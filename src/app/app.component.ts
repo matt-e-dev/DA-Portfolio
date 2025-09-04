@@ -80,7 +80,27 @@ export class AppComponent {
           description:
             'Project based on the Pokemon API. Search for your favorite Pokemon and see its stats, abilities and types.',
         },
+
       },
+      contact: {
+        title: 'Contact',
+        letsWork: "Let's work",
+        together: 'together',
+        gotProblem: 'Got a problem to solve?',
+        needDeveloper: 'Need a Frontend developer?',
+        letsTalk: "Let's talk!",
+        encourageText: 'Feel free to contact me. I look forward to expanding on my previous knowledge.',
+        nameQuestion: "What's your name?",
+        namePlaceholder: 'Your name goes here',
+        nameError: 'Please enter your name',
+        emailQuestion: "What's your email?",
+        emailPlaceholder: 'your.email@enterhere.com',
+        emailError: 'Please enter a valid email',
+        helpQuestion: 'How can I help you?',
+        messagePlaceholder: 'Hello, my name is Matthias, I am interested in...',
+        messageError: 'Please enter a message',
+        submit: 'Submit :)'
+      }
     });
 
     translate.setTranslation('de', {
@@ -138,7 +158,27 @@ export class AppComponent {
           question: 'Worum geht es bei dem Projekt?',
           description:
             'Projekt basierend auf der Pokemon API. Suchen Sie nach Ihrem Lieblings-Pokemon und sehen Sie seine Statistiken, Fähigkeiten und Typen.',
+
         },
+      },
+      contact: {
+        title: 'Kontakt',
+        letsWork: 'Lassen Sie uns',
+        together: 'zusammenarbeiten',
+        gotProblem: 'Haben Sie ein Problem zu lösen?',
+        needDeveloper: 'Benötigen Sie einen Frontend-Entwickler?',
+        letsTalk: 'Sprechen wir!',
+        encourageText: 'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
+        nameQuestion: 'Wie ist Ihr Name?',
+        namePlaceholder: 'Ihr Name kommt hier hin',
+        nameError: 'Bitte geben Sie Ihren Namen ein',
+        emailQuestion: 'Wie lautet Ihre E-Mail?',
+        emailPlaceholder: 'ihre.email@hierangeben.com',
+        emailError: 'Bitte geben Sie eine gültige E-Mail ein',
+        helpQuestion: 'Wie kann ich Ihnen helfen?',
+        messagePlaceholder: 'Hallo, mein Name ist Matthias, ich interessiere mich für...',
+        messageError: 'Bitte geben Sie eine Nachricht ein',
+        submit: 'Absenden :)'
       },
     });
 

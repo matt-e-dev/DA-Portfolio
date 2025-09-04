@@ -56,14 +56,5 @@ export class NavbarComponent implements AfterViewInit {
   switchLanguage(language: string): void {
     this.currentLanguage = language;
     this.translate.use(language);
-
-    // Update active button styling
-    const buttons = document.querySelectorAll('.toggle-option');
-    buttons.forEach((button) => button.classList.remove('active'));
-
-    const activeButton = document.querySelector(
-      `.toggle-option:nth-child(${language === 'en' ? '1' : '2'})`
-    );
-    activeButton?.classList.add('active');
   }
 }

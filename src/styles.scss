@@ -7,11 +7,28 @@
     scrollbar-color: var(--primary-color) transparent; 
 }
 
+
+
 body {
     background-color: var(--background-color-black);
     margin: 0;
     
 }
+
+#cursor-shadow {
+  position: fixed;
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 24px 8px white;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: top 0.05s, left 0.05s;
+  mix-blend-mode: lighten;
+}
+
+
 
 /* FiraCode */
 

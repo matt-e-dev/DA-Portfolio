@@ -36,12 +36,15 @@
 
         <div class="right-side-container">
           <div *ngFor="let project of projects; let i = index">
-            <div *ngIf="selectedProjectIndex === i" class="project-card-img">
-              <img
-                [id]="project.id"
-                [src]="project.image"
-                [alt]="project.title"
-              />
+            <div class="project-card-img-wrapper" style="position:relative; display:inline-block;">
+              <div *ngIf="selectedProjectIndex === i" class="project-card-img">
+                <img
+                  [id]="project.id"
+                  [src]="project.image"
+                  [alt]="project.title"
+                />
+              </div>
+              <div class="green-background"></div>
             </div>
           </div>
         </div>

@@ -84,6 +84,13 @@
   .project-card-img {
     height: 200px;
     width: 260px;
+    background: repeating-linear-gradient(
+    120deg,
+    transparent 0px,
+    transparent 10px,
+    #00d4aa 10px,
+    #00d4aa 12px
+  );
 
     img {
       width: 260px;
@@ -95,6 +102,15 @@
       }
     }
   }
+
+  .green-background {
+  position: absolute;
+  width: 340px;     
+  height: 220px;              
+  z-index: -1;       
+  border-radius: 24px;
+
+}
 }
 
 .overlay {
@@ -109,7 +125,7 @@
   align-items: center;
   z-index: 1000;
   color: white;
-  overflow: auto; 
+  overflow: auto;
 
   .overlay-content {
     position: relative;
@@ -127,8 +143,7 @@
     width: 100%;
     border-radius: 8px;
     margin: 16px;
-    overflow: auto; 
-   
+    overflow: auto;
 
     @media (max-width: 1000px) {
       flex-direction: column-reverse;
@@ -138,7 +153,6 @@
 
     @media (max-width: 500px) {
       max-height: 80vh;
-     
     }
   }
 

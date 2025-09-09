@@ -5,10 +5,10 @@
         <img src="assets/imgs/about-me-img.png" alt="">
       </div>
 
-      <div class="picture-deco-container"></div>
+      <div class="picture-deco-container d-none" id="picture_deco_container"></div>
     </div>
 
-    <div class="info-container-wrapper">
+    <div class="info-container-wrapper" (mouseover)="showDeco()" (mouseleave)="hideDeco()">
       <p class="container-headers --primary-color">{{ 'aboutMe.title' | translate }}</p>
       <div class="info-container">
         <h2 class="container-headers-inside --primary-color">{{ 'aboutMe.subtitle' | translate }}</h2>

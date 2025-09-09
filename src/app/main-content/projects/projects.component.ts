@@ -13,11 +13,14 @@ export class ProjectsComponent {
   constructor(private translate: TranslateService) {}
   toggleImage(projectId: string, show: boolean): void {
     const element = document.getElementById(projectId);
+    const greenBg = document.getElementById('project_card_img');
     if (element) {
       if (show) {
         element.classList.remove('d-none');
+        greenBg?.classList.remove('d-none');
       } else {
         element.classList.add('d-none');
+        greenBg?.classList.add('d-none');
       }
     }
   }

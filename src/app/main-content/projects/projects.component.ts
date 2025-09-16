@@ -54,7 +54,7 @@ export class ProjectsComponent {
       question: 'projects.join.question',
       description: 'projects.join.description',
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
-      image: 'assets/imgs/test1.png',
+      image: 'assets/imgs/join.png',
       icon: 'assets/icons/join-icon.svg',
       github: 'https://github.com/KonstantinStark/join',
       link: 'assets/join/pages/login.html',
@@ -67,16 +67,18 @@ export class ProjectsComponent {
         { name: 'Firebase', icon: 'assets/icons/projects/firebase.png' },
       ],
     },
+
     {
-      id: 'Pokemon',
+      id: 'elPolloLoco',
       count: '02',
-      title: 'Pokemon',
-      question: 'projects.pokemon.question',
-      description: 'projects.pokemon.description',
-      technologies: 'JavaScript | HTML | CSS | API',
-      image: 'assets/imgs/test2.png',
-      github: 'https://github.com/matt-e-dev/Pokemon',
-      link: 'assets/pokemon/index.html',
+      title: 'El Pollo Loco',
+      question: 'What is the project about?',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      technologies: 'JavaScript | HTML | CSS | OOP',
+      image: 'assets/imgs/el-pollo-loco.png',
+      github: 'https://github.com/matt-e-dev/da-el-pollo-loco',
+      link: 'assets/el-pollo-loco/index.html',
       skills: [
         { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
         { name: 'HTML', icon: 'assets/icons/projects/html.png' },
@@ -84,21 +86,23 @@ export class ProjectsComponent {
       ],
     },
     // {
-    //   id: 'elPolloLoco',
-    //   count: '03',
-    //   title: 'El Pollo Loco',
-    //   question: 'What is the project about?',
-    //   description:
-    //     'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-    //   technologies: 'JavaScript | HTML | CSS | OOP',
+    //   id: 'Pokemon',
+    //   count: '02',
+    //   title: 'Pokemon',
+    //   question: 'projects.pokemon.question',
+    //   description: 'projects.pokemon.description',
+    //   technologies: 'JavaScript | HTML | CSS | API',
     //   image: 'assets/imgs/test2.png',
-    //   link: 'assets/pokemon/index.html',
+    //   github: 'https://github.com/matt-e-dev/Pokemon',
+    //   link: 'assets/da-el-pollo-loco/index.html',
     //   skills: [
     //     { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
     //     { name: 'HTML', icon: 'assets/icons/projects/html.png' },
     //     { name: 'CSS', icon: 'assets/icons/projects/css.png' },
     //   ],
     // },
+
+
   ];
 
   nextProject(): void {

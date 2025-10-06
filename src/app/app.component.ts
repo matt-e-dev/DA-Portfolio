@@ -101,6 +101,24 @@ export class AppComponent {
         messageError: 'Please enter a message',
         submit: 'Submit :)',
       },
+      slider: {
+        availableRemote: 'Available for remote work',
+        frontendDeveloper: 'Frontend Developer',
+        basedBerlin: 'Based in Berlin',
+        openToWork: 'Open to work',
+      },
+      header: {
+        title: 'Frontend Developer',
+        checkWork: 'Check my work',
+        contactMe: 'Contact me',
+      },
+      footer: {
+        webDeveloper: 'Web Developer',
+        location: 'Berlin, Germany',
+        github: 'Github',
+        legalNotice: 'Legal Notice',
+        email: 'Email',
+      },
     });
 
     translate.setTranslation('de', {
@@ -180,6 +198,24 @@ export class AppComponent {
           'Hallo, mein Name ist Matthias, ich interessiere mich für...',
         messageError: 'Bitte geben Sie eine Nachricht ein',
         submit: 'Absenden :)',
+      },
+      slider: {
+        availableRemote: 'Verfügbar für Remote-Arbeit',
+        frontendDeveloper: 'Frontend Entwickler',
+        basedBerlin: 'Ansässig in Berlin',
+        openToWork: 'Bereit für neue Projekte',
+      },
+      header: {
+        title: 'Frontend Entwickler',
+        checkWork: 'Meine Arbeit ansehen',
+        contactMe: 'Kontaktieren Sie mich',
+      },
+      footer: {
+        webDeveloper: 'Web Entwickler',
+        location: 'Berlin, Deutschland',
+        github: 'Github',
+        legalNotice: 'Impressum',
+        email: 'E-Mail',
       },
     });
 

@@ -26,6 +26,12 @@
     "required": "Dieses Feld ist erforderlich",
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
   },
+  "slider": {
+    "availableRemote": "Verfügbar für Remote-Arbeit",
+    "frontendDeveloper": "Frontend Entwickler",
+    "basedBerlin": "Ansässig in Berlin",
+    "openToWork": "Bereit für neue Projekte"
+  },
   "footer": {
     "imprint": "Impressum"
   }

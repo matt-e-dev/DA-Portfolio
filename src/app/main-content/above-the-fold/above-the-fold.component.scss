@@ -135,10 +135,10 @@
     @keyframes bounce-arrow {
       0%,
       100% {
-        transform: translateY(0); 
+        transform: translateY(0);
       }
       50% {
-        transform: translateY(5px); 
+        transform: translateY(5px);
       }
     }
   }
@@ -152,21 +152,12 @@
     transform: rotate(-5deg);
     overflow: hidden;
 
-    @keyframes slide {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
     .slider-content {
       display: flex;
       align-items: center;
       height: 100%;
-      width: 100%;
-      animation: slide 5s linear infinite;
+      width: max-content;
+      animation: scroll 20s linear infinite;
 
       p {
         color: var(--primary-color);
@@ -177,7 +168,16 @@
       }
 
       .slider-devider-dots {
-        font-weight: 600;
+        font-weight: 700;
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-50%));
       }
     }
   }
@@ -189,12 +189,9 @@
   }
 }
 
-
 @media (max-width: 600px) {
   .header-buttons {
     display: flex;
     flex-direction: column;
   }
 }
-
-

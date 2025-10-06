@@ -1,6 +1,6 @@
 <div id="about-me" class="about-me-wrapper">
   <div class="about-me-content">
-    <div class="left-side-container">
+    <div class="left-side-container" (mouseover)="showDeco()" (mouseleave)="hideDeco()">
       <div class="picture-container">
         <img src="assets/imgs/about-me-img.png" alt="">
       </div>
@@ -8,7 +8,7 @@
       <div class="picture-deco-container d-none" id="picture_deco_container"></div>
     </div>
 
-    <div class="info-container-wrapper" (mouseover)="showDeco()" (mouseleave)="hideDeco()">
+    <div class="info-container-wrapper">
       <p class="container-headers --primary-color">{{ 'aboutMe.title' | translate }}</p>
       <div class="info-container">
         <h2 class="container-headers-inside --primary-color">{{ 'aboutMe.subtitle' | translate }}</h2>

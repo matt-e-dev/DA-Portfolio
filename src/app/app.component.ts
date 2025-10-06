@@ -61,6 +61,8 @@ export class AppComponent {
         contactText:
           'Feel free to contact me. I look forward to expanding on my previous knowledge.',
         letsTalk: "Let's talk",
+        growthOverlay:
+          "I've got a special interest in learning",
       },
       projects: {
         portfolio: 'Portfolio',
@@ -158,6 +160,8 @@ export class AppComponent {
         contactText:
           'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
         letsTalk: 'Sprechen wir',
+        growthOverlay:
+          'Ich habe ein besonderes Interesse an',
       },
       projects: {
         portfolio: 'Portfolio',

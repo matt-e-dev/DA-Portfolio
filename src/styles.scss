@@ -1,18 +1,14 @@
 /* You can add global styles to /* Apply global styles */
 * {
-
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    scrollbar-width: thin; 
-    scrollbar-color: var(--primary-color) transparent; 
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
 }
 
-
-
 body {
-    background-color: var(--background-color-black);
-    margin: 0;
-    
+  background-color: var(--background-color-black);
+  margin: 0;
 }
 
 #cursor-shadow {
@@ -28,186 +24,199 @@ body {
   mix-blend-mode: lighten;
 }
 
-
-
 /* FiraCode */
 
 @font-face {
-    font-family: 'FiraCode';
-    src: url('assets/fonts/Fira_Code/FiraCode-Regular.ttf') format('truetype');
-    
+  font-family: "FiraCode";
+  src: url("assets/fonts/Fira_Code/FiraCode-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'FiraCode';
-    src: url('assets/fonts/Fira_Code/FiraCode-Bold.ttf') format('truetype');
-    
+  font-family: "FiraCode";
+  src: url("assets/fonts/Fira_Code/FiraCode-Bold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'FiraCode';
-    src: url('assets/fonts/Fira_Code/FiraCode-Light.ttf') format('truetype');
-   
+  font-family: "FiraCode";
+  src: url("assets/fonts/Fira_Code/FiraCode-Light.ttf") format("truetype");
 }
 
 /* Karla */
 
 @font-face {
-    font-family: 'Karla';
-    src: url('assets/fonts/Karla/Karla-Regular.ttf') format('truetype');
-    
+  font-family: "Karla";
+  src: url("assets/fonts/Karla/Karla-Regular.ttf") format("truetype");
 }
 
 :root {
+  /*CSS variables for colors */
+  --primary-color: #3dcfb6;
+  --secondary-color: #2ecc71;
+  --background-color-black: #1c1c1c;
+  --background-color-green: #08463b;
+  --text-color: #ecf0f1;
+  --accent-color: #e74c3c;
+  --background-color-green-containers: #3dcfb61a;
 
-    /*CSS variables for colors */
-    --primary-color: #3DCFB6;
-    --secondary-color: #2ecc71;
-    --background-color-black: #1C1C1C;
-    --background-color-green: #08463B;
-    --text-color: #ecf0f1;
-    --accent-color: #e74c3c;
-    --background-color-green-containers: #3DCFB61A;
+  /*CSS variables for fonts */
 
-    /*CSS variables for fonts */
+  --font-size-text-small: 1rem; /* 16px */
+  --font-size-text-normal: 1.125rem; /* 18px */
+  --font-size-text-large: 1.5rem; /* 24px */
+  --container-headers: 1.5rem; /* 24px */
+  --container-headers-inside: 4rem; /* 64px */
+  --font-size-h2: 4rem; /* 64px */
+  --font-size-h1: 8rem; /* 128px */
+  --font-size-projects-name-header: 4rem; /* 64px */
+  --font-size-count: 8rem; /* 128px */
 
-    
-    --font-size-text-small: 1rem; /* 16px */
-    --font-size-text-normal: 1.125rem; /* 18px */
-    --font-size-text-large: 1.5rem; /* 24px */
-    --container-headers: 1.5rem; /* 24px */
-    --container-headers-inside: 4rem; /* 64px */
-    --font-size-h2: 4rem; /* 64px */
-    --font-size-h1: 8rem; /* 128px */
-    --font-size-projects-name-header: 4rem; /* 64px */
-    --font-size-count: 8rem; /* 128px */
+  --font-size-text-small-responsive: 0.875rem; /* 14px */
+  --font-size-text-normal-responsive: 1rem; /* 16px */
+  --font-size-text-large-responsive: 1.25rem; /* 20px */
+  --container-headers-responsive: 1.125rem; /* 18px */
+  --container-headers-inside-responsive: 2.5rem;
+  --font-size-projects-name-header-responsive: 2.5rem; /* 56px */
+  --font-size-count-responsive: 4.5rem; /* 72px */
 
-    --font-size-text-small-responsive: 0.875rem; /* 14px */
-    --font-size-text-normal-responsive: 1rem; /* 16px */
-    --font-size-text-large-responsive: 1.25rem; /* 20px */
-    --container-headers-responsive: 1.125rem; /* 18px */
-    --container-headers-inside-responsive: 2.5rem;
-    --font-size-projects-name-header-responsive: 2.5rem; /* 56px */
-    --font-size-count-responsive: 4.5rem; /* 72px */
-
-
-    /*CSS variables for font-weight */
-    --font-weight-light:400;
-    --font-weight-normal:700;
-
-    
+  /*CSS variables for font-weight */
+  --font-weight-light: 400;
+  --font-weight-normal: 700;
 }
-
 
 .d-none {
-    display: none !important;
-
+  display: none !important;
 }
 
-
 a {
-
-    text-decoration: none;
- 
+  text-decoration: none;
 }
 
 .no-scroll {
-    overflow: hidden;
-    height: 100%; 
+  overflow: hidden;
+  height: 100%;
 }
 
-
 .--primary-color {
-    color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
 }
 
 .--secondary-color {
-    color: var(--secondary-color) !important;
+  color: var(--secondary-color) !important;
 }
 
 .container-headers {
-    font-weight: var(--font-weight-light);
-    font-size: clamp(var(--container-headers-responsive), 3vw, var(--container-headers)); 
-    font-family:'Karla';
-    
+  font-weight: var(--font-weight-light);
+  font-size: clamp(
+    var(--container-headers-responsive),
+    3vw,
+    var(--container-headers)
+  );
+  font-family: "Karla";
 }
 
 .container-headers-inside {
-    font-size: clamp(var(--container-headers-inside-responsive), 3vw, var(--container-headers-inside)); 
-    font-weight: var(--font-weight-normal);
-    font-family: 'FiraCode';
+  font-size: clamp(
+    var(--container-headers-inside-responsive),
+    3vw,
+    var(--container-headers-inside)
+  );
+  font-weight: var(--font-weight-normal);
+  font-family: "FiraCode";
 }
 
 .container-text-small {
-    font-weight: var(--font-weight-light);
-    font-size: clamp(var(--font-size-text-small-responsive), 2.5vw, var(--font-size-text-small)); 
-    color: var(--text-color);
-    line-height: 120%;
-    font-family: 'Karla';
+  font-weight: var(--font-weight-light);
+  font-size: clamp(
+    var(--font-size-text-small-responsive),
+    2.5vw,
+    var(--font-size-text-small)
+  );
+  color: var(--text-color);
+  line-height: 120%;
+  font-family: "Karla";
 }
 
 .container-text {
-    font-weight: var(--font-weight-light);
-    font-size: clamp(var(--font-size-text-normal-responsive), 2vw, var(--font-size-text-normal)); 
-    color: var(--text-color);
-    line-height: 120%;
-    font-family: 'Karla';
+  font-weight: var(--font-weight-light);
+  font-size: clamp(
+    var(--font-size-text-normal-responsive),
+    2vw,
+    var(--font-size-text-normal)
+  );
+  color: var(--text-color);
+  line-height: 120%;
+  font-family: "Karla";
 }
 
 .container-text-large {
-    font-weight: var(--font-weight-normal);
-    font-size: clamp(var(--font-size-text-large-responsive), 2.5vw, var(--font-size-text-large)); 
-    color: var(--text-color);
-    font-family: 'FiraCode';
+  font-weight: var(--font-weight-normal);
+  font-size: clamp(
+    var(--font-size-text-large-responsive),
+    2.5vw,
+    var(--font-size-text-large)
+  );
+  color: var(--text-color);
+  font-family: "FiraCode";
 }
 
 .projects-count-headers {
-    font-size: clamp(var(--font-size-projects-name-header-responsive), 8vw, var(--font-size-count));
-    margin: 0;
-    margin-top: 24px;
-  }
+  font-size: clamp(
+    var(--font-size-projects-name-header-responsive),
+    8vw,
+    var(--font-size-count)
+  );
+  margin: 0;
+  margin-top: 24px;
+}
 
 .projects-title-headers {
-font-size: clamp(var(--font-size-text-large), 5vw, var(--font-size-projects-name-header));
-font-weight: var(--font-weight-normal);
-font-family: 'FiraCode';
-margin: 0;
+  font-size: clamp(
+    var(--font-size-text-large),
+    5vw,
+    var(--font-size-projects-name-header)
+  );
+  font-weight: var(--font-weight-normal);
+  font-family: "FiraCode";
+  margin: 0;
 }
-
 
 .main-btns {
+  color: var(--text-color);
+  background-color: transparent;
+  font-size: clamp(
+    var(--font-size-text-normal-responsive),
+    2vw,
+    var(--font-size-text-normal)
+  );
+  font-family: "Karla";
+  border: 1px solid var(--primary-color);
+  padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 32px); // Responsive vertical and horizontal padding
+  border-radius: clamp(12px, 3vw, 24px); // Responsive border radius
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  a {
     color: var(--text-color);
-    background-color: transparent;
-    font-size: clamp(var(--font-size-text-normal-responsive), 2vw, var(--font-size-text-normal));
-    font-family: 'Karla';
-    border: 1px solid var(--primary-color);
-    padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 32px); // Responsive vertical and horizontal padding
-    border-radius: clamp(12px, 3vw, 24px); // Responsive border radius
-    cursor: pointer;
-    overflow: hidden; 
-    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  span {
+    display: inline-block;
+   
+  }
 
-    a {
-        color: var(--text-color);
-    }
-    span {
-        display: inline-block;
-        transition: transform 3s ease-out; 
-    }
+  &:hover span {
+    transform: translateX(-220%);
+    transition: transform 2s ease-out;
+     animation: slideInFromRight 2s ease-out 2s forwards;
+  }
 
-    &:hover span {
-        transform: translateX(-140%); 
-    }
-
-    &:hover {
-        background-color: var(--button-hover-background-color); 
-    }
-
-    &:not(:hover) span {
-        transition: transform 3s ease-out; 
-    }
 }
 
-
-
-
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(140%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

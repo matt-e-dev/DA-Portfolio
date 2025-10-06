@@ -23,13 +23,14 @@
               <span (click)="toggleOverlay()">X</span>
             </div>
             <div class="navbar-overlay-links">
-              <div class="toggle-button">
-                <button class="toggle-option" [class.active]="currentLanguage === 'en'" (click)="switchLanguage('en')">EN</button>
-                <button class="toggle-option" [class.active]="currentLanguage === 'de'" (click)="switchLanguage('de')">DE</button>
+             
+              <a class="container-text-large" href="#about-me" (click)="closeOverlay()">{{ 'navigation.about' | translate }}</a>
+              <a class="container-text-large" href="#skills" (click)="closeOverlay()">{{ 'navigation.skills' | translate }}</a>
+              <a class="container-text-large" href="#projects" (click)="closeOverlay()">{{ 'navigation.projects' | translate }}</a>
+               <div class="toggle-button">
+                <button class="toggle-option" [class.active]="currentLanguage === 'en'" (click)="switchLanguage('en'); closeOverlay()">EN</button>
+                <button class="toggle-option" [class.active]="currentLanguage === 'de'" (click)="switchLanguage('de'); closeOverlay()">DE</button>
               </div>
-              <a class="container-text-large" href="#about-me">{{ 'navigation.about' | translate }}</a>
-              <a class="container-text-large" href="#skills">{{ 'navigation.skills' | translate }}</a>
-              <a class="container-text-large" href="#projects">{{ 'navigation.projects' | translate }}</a>
               <!-- <div class="toggle-button">
                 <button class="toggle-option active">EN</button>
                 <button class="toggle-option">DE</button>

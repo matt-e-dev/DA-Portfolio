@@ -21,6 +21,8 @@
 
   > .navbar-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 48px;
 
     .navbar-burger-menu {
@@ -64,6 +66,7 @@
         > .navbar-overlay-links {
           display: flex;
           flex-direction: column;
+          align-items: center;
           gap: 12px;
           text-align: center;
         }

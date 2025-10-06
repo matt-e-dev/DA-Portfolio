@@ -50,7 +50,12 @@ export class NavbarComponent implements AfterViewInit {
 
   toggleOverlay(): void {
     const overlay = document.getElementById('navbarOverlay');
-    overlay?.classList.toggle('d-none'); //
+    overlay?.classList.toggle('d-none');
+  }
+
+  closeOverlay(): void {
+    const overlay = document.getElementById('navbarOverlay');
+    overlay?.classList.add('d-none');
   }
 
   switchLanguage(language: string): void {

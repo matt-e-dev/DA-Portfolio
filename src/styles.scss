@@ -201,15 +201,13 @@ a {
   }
   span {
     display: inline-block;
-   
   }
 
   &:hover span {
     transform: translateX(-220%);
     transition: transform 2s ease-out;
-     animation: slideInFromRight 2s ease-out 2s forwards;
+    animation: slideInFromRight 2s ease-out 2s forwards;
   }
-
 }
 
 @keyframes slideInFromRight {

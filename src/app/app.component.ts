@@ -61,8 +61,7 @@ export class AppComponent {
         contactText:
           'Feel free to contact me. I look forward to expanding on my previous knowledge.',
         letsTalk: "Let's talk",
-        growthOverlay:
-          "I've got a special interest in learning",
+        growthOverlay: "I've got a special interest in learning",
       },
       projects: {
         portfolio: 'Portfolio',
@@ -118,6 +117,7 @@ export class AppComponent {
         webDeveloper: 'Web Developer',
         location: 'Berlin, Germany',
         github: 'Github',
+        linkedin: 'LinkedIn',
         legalNotice: 'Legal Notice',
         email: 'Email',
       },
@@ -160,8 +160,7 @@ export class AppComponent {
         contactText:
           'Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
         letsTalk: 'Sprechen wir',
-        growthOverlay:
-          'Ich habe ein besonderes Interesse an',
+        growthOverlay: 'Ich habe ein besonderes Interesse an ',
       },
       projects: {
         portfolio: 'Portfolio',
@@ -185,7 +184,7 @@ export class AppComponent {
       contact: {
         title: 'Kontakt',
         letsWork: 'Lassen Sie uns',
-        together: 'zusammenarbeiten',
+        together: 'kooperieren',
         gotProblem: 'Haben Sie ein Problem zu lösen?',
         needDeveloper: 'Benötigen Sie einen Frontend-Entwickler?',
         letsTalk: 'Sprechen wir!',
@@ -218,6 +217,7 @@ export class AppComponent {
         webDeveloper: 'Web Entwickler',
         location: 'Berlin, Deutschland',
         github: 'Github',
+        linkedin: 'LinkedIn',
         legalNotice: 'Impressum',
         email: 'E-Mail',
       },

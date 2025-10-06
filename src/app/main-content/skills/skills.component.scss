@@ -87,12 +87,18 @@
 
         .overlay {
           position: absolute;
-          bottom: 100%;
+          top: 10px;
           left: 50%;
           transform: translateX(-50%);
-          z-index: 10;
+          z-index: 10000 !important;
           display: none;
-          margin-bottom: 8px;
+          height: 100px;
+          width: 200px;
+          background-color: white;
+
+          color: black;
+          padding: 10px;
+          border-radius: 8px;
         }
 
         &:hover .overlay {
@@ -101,7 +107,7 @@
       }
     }
 
-        .skills-row-growth-responsive {
+    .skills-row-growth-responsive {
       width: 100%;
       display: flex;
       justify-content: center;

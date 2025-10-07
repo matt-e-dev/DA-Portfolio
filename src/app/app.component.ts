@@ -100,7 +100,11 @@ export class AppComponent {
         helpQuestion: 'How can I help you?',
         messagePlaceholder: 'Hello, my name is Matthias, I am interested in...',
         messageError: 'Please enter a message',
-        submit: 'Submit :)',
+        submit: 'Say hello :)',
+        privacyText: "I've read the",
+        privacyPolicy: 'privacy policy',
+        privacyAgree: 'and agree to the processing of my data as outlined.',
+        privacyError: 'You must accept the privacy policy',
       },
       slider: {
         availableRemote: 'Available for remote work',
@@ -200,7 +204,12 @@ export class AppComponent {
         messagePlaceholder:
           'Hallo, mein Name ist Matthias, ich interessiere mich für...',
         messageError: 'Bitte geben Sie eine Nachricht ein',
-        submit: 'Absenden :)',
+        submit: 'Sag hallo :)',
+        privacyText: 'Ich habe die',
+        privacyPolicy: 'Datenschutzerklärung',
+        privacyAgree:
+          'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
+        privacyError: 'Sie müssen der Datenschutzerklärung zustimmen',
       },
       slider: {
         availableRemote: 'Verfügbar für Remote-Arbeit',

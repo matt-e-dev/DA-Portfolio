@@ -48,6 +48,27 @@
           }
          </div>
       
+         <div class="privacy-contact-form container-text-large">
+           <label class="privacy-label">
+             <input 
+               #privacy="ngModel" 
+               [(ngModel)]="contactData.privacyAccepted" 
+               type="checkbox" 
+               name="privacy" 
+               required 
+               class="privacy-checkbox"
+             />
+             <span class="checkmark"></span>
+             <span class="privacy-text">
+               {{ "contact.privacyText" | translate }} 
+               <a href="/legal-notice" class="privacy-link">{{ "contact.privacyPolicy" | translate }}</a>
+               {{ "contact.privacyAgree" | translate }}
+             </span>
+           </label>
+           @if (!privacy.valid && (privacy.touched || contactForm.submitted)){
+             <span class="error-message">{{ "contact.privacyError" | translate }}</span>
+           }
+         </div>
 
             <input id="submit" class="submit" type="submit" value="{{ 'contact.submit' | translate }}"  />
 

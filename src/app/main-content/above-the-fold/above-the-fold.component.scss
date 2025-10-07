@@ -52,11 +52,11 @@
     padding-top: 320px;
 
     @media (max-width: 1370px) {
-      padding-top: 280px;
+      padding-top: 160px;
     }
 
     @media (max-width: 1100px) {
-      padding-top: 700px;
+      padding-top: 580px;
     }
 
     .mail-icon {
@@ -90,6 +90,7 @@
 
       @media (max-width: 1100px) {
         height: 160px;
+        
       }
     }
 
@@ -102,7 +103,7 @@
   }
 
   .left-side-content-above-the-fold {
-    padding-top: 720px;
+    padding-top: 640px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +111,7 @@
     gap: 16px;
 
     @media (max-width: 1370px) {
-      padding-top: 680px;
+      padding-top: 560px;
     }
 
     > .deco-line-left {
@@ -151,6 +152,7 @@
     max-width: 1920px;
     transform: rotate(-5deg);
     overflow: hidden;
+   
 
     .slider-content {
       display: flex;

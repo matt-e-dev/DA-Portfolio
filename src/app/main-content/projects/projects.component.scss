@@ -136,7 +136,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(45deg, #1c1c1c, #08463b4d);
+      background: linear-gradient(
+    100deg,
+    var(--background-color-black),
+    var(--background-color-green)
+  );
     padding: 32px;
     border-radius: 8px;
     height: auto;

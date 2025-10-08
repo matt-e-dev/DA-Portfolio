@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,8 +8,9 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnDestroy {
   currentLanguage = 'en';
+  isOverlayOpen = false;
 
   constructor(private translate: TranslateService) {}
 
@@ -50,12 +51,41 @@ export class NavbarComponent implements AfterViewInit {
 
   toggleOverlay(): void {
     const overlay = document.getElementById('navbarOverlay');
-    overlay?.classList.toggle('d-none');
+    this.isOverlayOpen = !this.isOverlayOpen;
+    
+    if (this.isOverlayOpen) {
+      overlay?.classList.remove('d-none');
+    } else {
+      overlay?.classList.add('d-none');
+    }
   }
 
   closeOverlay(): void {
     const overlay = document.getElementById('navbarOverlay');
     overlay?.classList.add('d-none');
+    this.isOverlayOpen = false;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    if (this.isOverlayOpen) {
+      const overlay = document.getElementById('navbarOverlay');
+      const burgerMenu = document.getElementById('navbarBurgerMenu');
+      const target = event.target as HTMLElement;
+      
+      // Check if click is outside overlay and not on burger menu
+      if (overlay && !overlay.contains(target) && burgerMenu && !burgerMenu.contains(target)) {
+        this.closeOverlay();
+      }
+    }
+  }
+
+  stopPropagation(event: Event): void {
+    event.stopPropagation();
+  }
+
+  ngOnDestroy(): void {
+    // Cleanup if needed
   }
 
   switchLanguage(language: string): void {

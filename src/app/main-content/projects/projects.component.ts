@@ -56,7 +56,7 @@ export class ProjectsComponent {
       technologies: 'Angular | TypeScript | HTML | CSS | Firebase',
       image: 'assets/imgs/join.png',
       icon: 'assets/icons/join-icon.svg',
-      github: 'https://github.com/KonstantinStark/join',
+      github: 'https://github.com/matt-e-dev/join',
       link: 'assets/join/pages/login.html',
 
       skills: [
@@ -78,7 +78,7 @@ export class ProjectsComponent {
       technologies: 'JavaScript | HTML | CSS | OOP',
       image: 'assets/imgs/el-pollo-loco.png',
       github: 'https://github.com/matt-e-dev/da-el-pollo-loco',
-      link: 'assets/el-pollo-loco/index.html',
+      link: 'assets/da-el-pollo-loco/index.html',
       skills: [
         { name: 'JavaScript', icon: 'assets/icons/projects/javascript.png' },
         { name: 'HTML', icon: 'assets/icons/projects/html.png' },

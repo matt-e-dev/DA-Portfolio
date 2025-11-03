@@ -27,18 +27,19 @@ export class ContactComponent {
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
       },
+      responseType: 'text' as const,
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
+        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
+            console.log(response);
             ngForm.resetForm();
           },
           error: (error) => {
@@ -46,7 +47,7 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       ngForm.resetForm();
     }
   }

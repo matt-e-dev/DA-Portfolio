@@ -35,14 +35,14 @@ export class AppComponent {
         title: 'Who I am',
         subtitle: 'About Me',
         description:
-          'After completing my Umschulung in E-Commerce Management, including my IHK exam, I decided to expand my expertise and immerse myself in the world of coding.',
+          'After completing my training in E-Commerce Management, including my IHK exam, I decided to expand my expertise and immerse myself in the world of coding.',
         description2:
-          "During my college time, I regularly joined the programmers' group in the afternoons to learn and practice coding, which further fueled my motivation to pursue web development more seriously. To build on this foundation, I joined Developer Akademie, where I recently completed a comprehensive frontend development training program.",
+          "During my college time, I regularly joined the programmers group in the afternoons to learn and practice coding, which further fueled my motivation to pursue web development more seriously. To build on this foundation, I joined Developer Akademie, where I recently completed a comprehensive frontend development training program.",
         location: 'Based in Berlin, open to remote work opportunities.',
         mindset: 'Happy to push my boundaries and embrace new challenges.',
         learning:
-          "During the intense frontend development program, I quickly realized that to push beyond my limitations, I needed a structured way to absorb and retain new knowledge. That's why I developed a personal note-taking system, helping me organize concepts, track solutions, and reflect on what I've learned. This method not only strengthened my understanding but also made me more efficient in tackling complex problems.",
-        blogEntry: 'Check my blog entry here:',
+          "I approach every challenge as an opportunity to grow and learn. Whether it's debugging complex code or architecting new features, I thrive on finding elegant solutions through analytical thinking and creative problem-solving. I love pushing beyond my limits, constantly expanding my skill set, and collaborating with others to achieve the best results..",
+      
       },
       skills: {
         title: 'Technologies',
@@ -144,8 +144,7 @@ export class AppComponent {
         mindset:
           'Ich freue mich darauf, meine Grenzen zu überschreiten und neue Herausforderungen anzunehmen.',
         learning:
-          'Während des intensiven Frontend-Entwicklungsprogramms erkannte ich schnell, dass ich eine strukturierte Methode benötigte, um neues Wissen aufzunehmen und zu behalten, um über meine Grenzen hinauszugehen. Deshalb entwickelte ich ein persönliches Notizensystem, das mir hilft, Konzepte zu organisieren, Lösungen zu verfolgen und über das Gelernte zu reflektieren. Diese Methode stärkte nicht nur mein Verständnis, sondern machte mich auch effizienter beim Lösen komplexer Probleme.',
-        blogEntry: 'Schauen Sie sich meinen Blog-Eintrag hier an:',
+          'Ich betrachte jede Herausforderung als Gelegenheit zu wachsen und zu lernen. Ob beim Debuggen komplexen Codes oder beim Entwickeln neuer Features, ich liebe es, elegante Lösungen durch analytisches Denken und kreative Problemlösung zu finden. Ich liebe es, über meine Grenzen hinauszugehen, meinen Fähigkeitsbereich ständig zu erweitern und mit anderen zusammenzuarbeiten, um die besten Ergebnisse zu erzielen.',
       },
       skills: {
         title: 'Technologien',

@@ -94,8 +94,8 @@
         right: -20px;
         top: 50%;
         transform: translateY(-50%);
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         background-color: var(--primary-color);
         border-radius: 50%;
         opacity: 0;
@@ -108,11 +108,23 @@
 
       img {
         display: block;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
 
         &:hover {
           transform: scale(1.33);
         }
+      }
+    }
+
+    .github-link {
+      &:hover img {
+        content: url('/assets/icons-above-the-fold/github-white.png');
+      }
+    }
+
+    .linkedin-link {
+      &:hover img {
+        content: url('/assets/icons-above-the-fold/linkedin-white.png');
       }
     }
   }

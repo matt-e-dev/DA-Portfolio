@@ -48,6 +48,13 @@
       display: none;
     }
   }
+
+  > .right-container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+  }
 }
 
 .bottom-container {
@@ -60,4 +67,35 @@
      display:block;
 
     }
+}
+.social-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
 }

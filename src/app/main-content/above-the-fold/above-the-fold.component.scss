@@ -129,6 +129,12 @@
     }
 
     .mail-link {
+      display: none;
+      
+      @media (max-width: 1100px) {
+        display: inline-block;
+      }
+
       &:hover img {
         content: url('/assets/icons-above-the-fold/mail-white.png');
       }

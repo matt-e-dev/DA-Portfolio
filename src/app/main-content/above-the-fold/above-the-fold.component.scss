@@ -127,6 +127,12 @@
         content: url('/assets/icons-above-the-fold/linkedin-white.png');
       }
     }
+
+    .mail-link {
+      &:hover img {
+        content: url('/assets/icons-above-the-fold/mail-white.png');
+      }
+    }
   }
 
   .left-side-content-above-the-fold {

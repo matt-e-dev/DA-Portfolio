@@ -125,6 +125,21 @@ export class AppComponent {
         legalNotice: 'Legal Notice',
         email: 'Email',
       },
+      privacyPolicy: {
+        title: 'Privacy Policy',
+        informationCollect: 'Information We Collect',
+        informationText: 'We only collect the email address that you voluntarily provide through our contact form.',
+        purposeCollect: 'Purpose of Collection',
+        purposeText: 'Your email address is used solely to respond to your inquiry and provide any requested assistance.',
+        dataSharing: 'Data Sharing',
+        dataSharingText: 'We do not share your email address with third parties except where required by law.',
+        dataStorage: 'Data Storage and Security',
+        dataStorageText: 'Your information is stored securely and only retained as long as necessary to fulfill the purpose of your inquiry.',
+        yourRights: 'Your Rights',
+        yourRightsText: 'You have the right to access, correct, or request deletion of your email address and to withdraw your consent for processing at any time.',
+        contact: 'Contact',
+        contactText: 'If you have questions about this privacy policy or your data, please contact us at:',
+      },
     });
 
     translate.setTranslation('de', {
@@ -228,6 +243,21 @@ export class AppComponent {
         linkedin: 'LinkedIn',
         legalNotice: 'Impressum',
         email: 'E-Mail',
+      },
+      privacyPolicy: {
+        title: 'Datenschutzerklärung',
+        informationCollect: 'Informationen, die wir sammeln',
+        informationText: 'Wir sammeln nur die E-Mail-Adresse, die Sie freiwillig über unser Kontaktformular angeben.',
+        purposeCollect: 'Zweck der Erhebung',
+        purposeText: 'Ihre E-Mail-Adresse wird ausschließlich verwendet, um auf Ihre Anfrage zu antworten und die gewünschte Unterstützung zu leisten.',
+        dataSharing: 'Datenweitergabe',
+        dataSharingText: 'Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter, außer wenn dies gesetzlich vorgeschrieben ist.',
+        dataStorage: 'Datenspeicherung und Sicherheit',
+        dataStorageText: 'Ihre Informationen werden sicher gespeichert und nur so lange aufbewahrt, wie es zur Erfüllung des Zwecks Ihrer Anfrage erforderlich ist.',
+        yourRights: 'Ihre Rechte',
+        yourRightsText: 'Sie haben das Recht, auf Ihre E-Mail-Adresse zuzugreifen, sie zu korrigieren oder deren Löschung zu verlangen und Ihre Einwilligung zur Verarbeitung jederzeit zu widerrufen.',
+        contact: 'Kontakt',
+        contactText: 'Wenn Sie Fragen zu dieser Datenschutzerklärung oder Ihren Daten haben, kontaktieren Sie uns bitte unter:',
       },
     });
 

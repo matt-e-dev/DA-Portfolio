@@ -23,7 +23,8 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://matthias-e-portfolio.com/sendMail.php',
+    //used to be https://matthias-e-porfolio/sendMail.php
+    endPoint: './sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -36,7 +37,11 @@ export class ContactComponent {
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options
+        )
         .subscribe({
           next: (response) => {
             console.log(response);

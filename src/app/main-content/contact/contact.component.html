@@ -1,79 +1,130 @@
 <div class="contact-wrapper" id="contact">
   <div class="contact-content">
     <div class="text-container">
-      <h3 class="container-headers --primary-color">{{ "contact.title" | translate }}</h3>
-      <span class="container-headers-inside --primary-color">{{ "contact.letsWork" | translate }}</span>
+      <h3 class="container-headers --primary-color">
+        {{ "contact.title" | translate }}
+      </h3>
+      <span class="container-headers-inside --primary-color">{{
+        "contact.letsWork" | translate
+      }}</span>
       <span class="container-headers-inside --primary-color"
-        ><br />{{ "contact.together" | translate }}</span>
+        ><br />{{ "contact.together" | translate }}</span
+      >
       <p class="container-text-large --primary-color">
         {{ "contact.gotProblem" | translate }}
       </p>
       <p class="container-text-small">
         {{ "contact.encourageText" | translate }}
       </p>
-      <span class="container-text-large">{{ "contact.needDeveloper" | translate }}</span>
-      <span class="container-text-large --primary-color">{{ "contact.letsTalk" | translate }}</span>
+      <span class="container-text-large">{{
+        "contact.needDeveloper" | translate
+      }}</span>
+      <span class="container-text-large --primary-color">{{
+        "contact.letsTalk" | translate
+      }}</span>
     </div>
 
     <div class="contact-container">
-
-      <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <form
+        class="contact-form"
+        (ngSubmit)="onSubmit(contactForm)"
+        #contactForm="ngForm"
+      >
         <div class="name-contact-form">
-            <label class="container-text-large --primary-color" for="name">{{ "contact.nameQuestion" | translate }}</label>
-            <input #name = "ngModel" [(ngModel)]="contactData.name"  type="text" id="name" name="name" placeholder="{{ 'contact.namePlaceholder' | translate }}" required />
-            @if (!name.valid && (name.touched || contactForm.submitted)){
+          <label class="container-text-large --primary-color" for="name">{{
+            "contact.nameQuestion" | translate
+          }}</label>
+          <input
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="{{ 'contact.namePlaceholder' | translate }}"
+            required
+          />
+          @if (!name.valid && (name.touched || contactForm.submitted)){
 
-              <span>{{ "contact.nameError" | translate }}</span>
-      
-            }
-        </div>
-        <div class="email-contact-form">
-      
-            <label class="container-text-large --primary-color" for="email">{{ "contact.emailQuestion" | translate }}</label>
-            <input #email = "ngModel"[(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{ 'contact.emailPlaceholder' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
-            @if (!email.valid && (email.touched || contactForm.submitted)){
-
-              <span>{{ "contact.emailError" | translate }}</span>
-      
-            }
-        </div>
-        <div class="message-contact-form">
-          
-            <label class="container-text-large --primary-color" for="message">{{ "contact.helpQuestion" | translate }}</label>
-            <textarea #message = "ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{ 'contact.messagePlaceholder' | translate }}" required ></textarea>
-            @if (!message.valid && (message.touched || contactForm.submitted)){
-
-              <span>{{ "contact.messageError" | translate }}</span>
+          <span>{{ "contact.nameError" | translate }}</span>
 
           }
-         </div>
-      
-         <div class="privacy-contact-form container-text-large">
-           <label class="privacy-label">
-             <input 
-               #privacy="ngModel" 
-               [(ngModel)]="contactData.privacyAccepted" 
-               type="checkbox" 
-               name="privacy" 
-               required 
-               class="privacy-checkbox"
-             />
-             <span class="checkmark"></span>
-             <span class="privacy-text">
-               {{ "contact.privacyText" | translate }} 
-               <a href="/privacy-policy" class="privacy-link">{{ "contact.privacyPolicy" | translate }}</a>
-               {{ "contact.privacyAgree" | translate }}
-             </span>
-           </label>
-           @if (!privacy.valid && (privacy.touched || contactForm.submitted)){
-             <span class="error-message">{{ "contact.privacyError" | translate }}</span>
-           }
-         </div>
+        </div>
+        <div class="email-contact-form">
+          <label class="container-text-large --primary-color" for="email">{{
+            "contact.emailQuestion" | translate
+          }}</label>
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="{{ 'contact.emailPlaceholder' | translate }}"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
+          @if (!email.valid && (email.touched || contactForm.submitted)){
 
-            <input id="submit" class="submit" type="submit" value="{{ 'contact.submit' | translate }}"  />
+          <span>{{ "contact.emailError" | translate }}</span>
 
+          }
+        </div>
+        <div class="message-contact-form">
+          <label class="container-text-large --primary-color" for="message">{{
+            "contact.helpQuestion" | translate
+          }}</label>
+          <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            id="message"
+            name="message"
+            placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+            required
+          ></textarea>
+          @if (!message.valid && (message.touched || contactForm.submitted)){
+
+          <span>{{ "contact.messageError" | translate }}</span>
+
+          }
+        </div>
+
+        <div class="privacy-contact-form container-text-large">
+          <label class="privacy-label">
+            <input
+              #privacy="ngModel"
+              [(ngModel)]="contactData.privacyAccepted"
+              type="checkbox"
+              name="privacy"
+              required
+              class="privacy-checkbox"
+            />
+            <span class="checkmark"></span>
+            <span class="privacy-text">
+              {{ "contact.privacyText" | translate }}
+              <a
+                href="/privacy-policy"
+                class="privacy-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ "contact.privacyPolicy" | translate }}</a
+              >
+              {{ "contact.privacyAgree" | translate }}
+            </span>
+          </label>
+          @if (!privacy.valid && (privacy.touched || contactForm.submitted)){
+          <span class="error-message">{{
+            "contact.privacyError" | translate
+          }}</span>
+          }
+        </div>
+
+        <input
+          id="submit"
+          class="submit"
+          type="submit"
+          value="{{ 'contact.submit' | translate }}"
+        />
       </form>
     </div>
-
   </div>
 </div>

@@ -1,13 +1,35 @@
 <div class="navbar-wrapper">
   <div class="navbar">
     <nav class="navbar-container">
-            <div class="toggle-button navbar-before-responsive">
-        <button class="toggle-option" [class.active]="currentLanguage === 'en'" (click)="switchLanguage('en')">EN</button>
-        <button class="toggle-option" [class.active]="currentLanguage === 'de'" (click)="switchLanguage('de')">DE</button>
+      <div class="toggle-button navbar-before-responsive">
+        <button
+          class="toggle-option"
+          [class.active]="currentLanguage === 'en'"
+          (click)="switchLanguage('en')"
+        >
+          EN
+        </button>
+        <button
+          class="toggle-option"
+          [class.active]="currentLanguage === 'de'"
+          (click)="switchLanguage('de')"
+        >
+          DE
+        </button>
       </div>
-      <a class="container-text-large navbar-before-responsive" href="#about-me">{{ 'navigation.about' | translate }}</a>
-      <a class="container-text-large navbar-before-responsive" href="#skills">{{ 'navigation.skills' | translate }}</a>
-      <a class="container-text-large navbar-before-responsive" href="#projects">{{ 'navigation.projects' | translate }}</a>
+      <a
+        class="container-text-large navbar-before-responsive"
+        href="#about-me"
+        >{{ "navigation.about" | translate }}</a
+      >
+      <a class="container-text-large navbar-before-responsive" href="#skills">{{
+        "navigation.skills" | translate
+      }}</a>
+      <a
+        class="container-text-large navbar-before-responsive"
+        href="#projects"
+        >{{ "navigation.projects" | translate }}</a
+      >
 
       <div class="navbar-burger-menu-overlay-wrapper">
         <img
@@ -19,15 +41,40 @@
         />
         <div class="navbar-overlay d-none" id="navbarOverlay">
           <div class="navbar-overlay-content">
-           
             <div class="navbar-overlay-links">
-             
-              <a class="container-text-large" href="#about-me" (click)="closeOverlay()">{{ 'navigation.about' | translate }}</a>
-              <a class="container-text-large" href="#skills" (click)="closeOverlay()">{{ 'navigation.skills' | translate }}</a>
-              <a class="container-text-large" href="#projects" (click)="closeOverlay()">{{ 'navigation.projects' | translate }}</a>
-               <div class="toggle-button">
-                <button class="toggle-option" [class.active]="currentLanguage === 'en'" (click)="switchLanguage('en'); closeOverlay()">EN</button>
-                <button class="toggle-option" [class.active]="currentLanguage === 'de'" (click)="switchLanguage('de'); closeOverlay()">DE</button>
+              <a
+                class="container-text-large"
+                href="#about-me"
+                (click)="closeOverlay()"
+                >{{ "navigation.about" | translate }}</a
+              >
+              <a
+                class="container-text-large"
+                href="#skills"
+                (click)="closeOverlay()"
+                >{{ "navigation.skills" | translate }}</a
+              >
+              <a
+                class="container-text-large"
+                href="#projects"
+                (click)="closeOverlay()"
+                >{{ "navigation.projects" | translate }}</a
+              >
+              <div class="toggle-button">
+                <button
+                  class="toggle-option"
+                  [class.active]="currentLanguage === 'en'"
+                  (click)="switchLanguage('en'); closeOverlay()"
+                >
+                  EN
+                </button>
+                <button
+                  class="toggle-option"
+                  [class.active]="currentLanguage === 'de'"
+                  (click)="switchLanguage('de'); closeOverlay()"
+                >
+                  DE
+                </button>
               </div>
               <!-- <div class="toggle-button">
                 <button class="toggle-option active">EN</button>
@@ -49,13 +96,14 @@
       </div>
 
       <div class="logo-and-mouth">
-        <div
+        <a
+          href="#"
           class="logo"
           (mouseenter)="handleLogoHover()"
           (mouseleave)="handleLogoMouseLeave()"
         >
           <img src="assets/icons-above-the-fold/logo/logo.png" alt="" />
-        </div>
+        </a>
 
         <p class="mouth d-none">)</p>
       </div>

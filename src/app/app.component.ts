@@ -37,12 +37,11 @@ export class AppComponent {
         description:
           'After completing my training in E-Commerce Management, including my IHK exam, I decided to expand my expertise and immerse myself in the world of coding.',
         description2:
-          "During my college time, I regularly joined the programmers group in the afternoons to learn and practice coding, which further fueled my motivation to pursue web development more seriously. To build on this foundation, I joined Developer Akademie, where I recently completed a comprehensive frontend development training program.",
+          'During my college time, I regularly joined the programmers group in the afternoons to learn and practice coding, which further fueled my motivation to pursue web development more seriously. To build on this foundation, I joined Developer Akademie, where I recently completed a comprehensive frontend development training program.',
         location: 'Based in Berlin, open to remote work opportunities.',
         mindset: 'Happy to push my boundaries and embrace new challenges.',
         learning:
           "I approach every challenge as an opportunity to grow and learn. Whether it's debugging complex code or architecting new features, I thrive on finding elegant solutions through analytical thinking and creative problem-solving. I love pushing beyond my limits, constantly expanding my skill set, and collaborating with others to achieve the best results..",
-      
       },
       skills: {
         title: 'Technologies',
@@ -128,17 +127,33 @@ export class AppComponent {
       privacyPolicy: {
         title: 'Privacy Policy',
         informationCollect: 'Information We Collect',
-        informationText: 'We only collect the email address that you voluntarily provide through our contact form.',
+        informationText:
+          'We only collect the email address that you voluntarily provide through our contact form.',
         purposeCollect: 'Purpose of Collection',
-        purposeText: 'Your email address is used solely to respond to your inquiry and provide any requested assistance.',
+        purposeText:
+          'Your email address is used solely to respond to your inquiry and provide any requested assistance.',
         dataSharing: 'Data Sharing',
-        dataSharingText: 'We do not share your email address with third parties except where required by law.',
+        dataSharingText:
+          'We do not share your email address with third parties except where required by law.',
         dataStorage: 'Data Storage and Security',
-        dataStorageText: 'Your information is stored securely and only retained as long as necessary to fulfill the purpose of your inquiry.',
+        dataStorageText:
+          'Your information is stored securely and only retained as long as necessary to fulfill the purpose of your inquiry.',
         yourRights: 'Your Rights',
-        yourRightsText: 'You have the right to access, correct, or request deletion of your email address and to withdraw your consent for processing at any time.',
+        yourRightsText:
+          'You have the right to access, correct, or request deletion of your email address and to withdraw your consent for processing at any time.',
         contact: 'Contact',
-        contactText: 'If you have questions about this privacy policy or your data, please contact us at:',
+        contactText:
+          'If you have questions about this privacy policy or your data, please contact us at:',
+      },
+      legalNotice: {
+        title: 'Legal Notice',
+        contact: 'Contact',
+        phone: 'Phone',
+        email: 'E-Mail',
+        responsible: 'Responsible for content according to § 55 Abs. 2 RStV',
+        disclaimer: 'Disclaimer',
+        disclaimerText:
+          'Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.',
       },
     });
 
@@ -247,17 +262,33 @@ export class AppComponent {
       privacyPolicy: {
         title: 'Datenschutzerklärung',
         informationCollect: 'Informationen, die wir sammeln',
-        informationText: 'Wir sammeln nur die E-Mail-Adresse, die Sie freiwillig über unser Kontaktformular angeben.',
+        informationText:
+          'Wir sammeln nur die E-Mail-Adresse, die Sie freiwillig über unser Kontaktformular angeben.',
         purposeCollect: 'Zweck der Erhebung',
-        purposeText: 'Ihre E-Mail-Adresse wird ausschließlich verwendet, um auf Ihre Anfrage zu antworten und die gewünschte Unterstützung zu leisten.',
+        purposeText:
+          'Ihre E-Mail-Adresse wird ausschließlich verwendet, um auf Ihre Anfrage zu antworten und die gewünschte Unterstützung zu leisten.',
         dataSharing: 'Datenweitergabe',
-        dataSharingText: 'Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter, außer wenn dies gesetzlich vorgeschrieben ist.',
+        dataSharingText:
+          'Wir geben Ihre E-Mail-Adresse nicht an Dritte weiter, außer wenn dies gesetzlich vorgeschrieben ist.',
         dataStorage: 'Datenspeicherung und Sicherheit',
-        dataStorageText: 'Ihre Informationen werden sicher gespeichert und nur so lange aufbewahrt, wie es zur Erfüllung des Zwecks Ihrer Anfrage erforderlich ist.',
+        dataStorageText:
+          'Ihre Informationen werden sicher gespeichert und nur so lange aufbewahrt, wie es zur Erfüllung des Zwecks Ihrer Anfrage erforderlich ist.',
         yourRights: 'Ihre Rechte',
-        yourRightsText: 'Sie haben das Recht, auf Ihre E-Mail-Adresse zuzugreifen, sie zu korrigieren oder deren Löschung zu verlangen und Ihre Einwilligung zur Verarbeitung jederzeit zu widerrufen.',
+        yourRightsText:
+          'Sie haben das Recht, auf Ihre E-Mail-Adresse zuzugreifen, sie zu korrigieren oder deren Löschung zu verlangen und Ihre Einwilligung zur Verarbeitung jederzeit zu widerrufen.',
         contact: 'Kontakt',
-        contactText: 'Wenn Sie Fragen zu dieser Datenschutzerklärung oder Ihren Daten haben, kontaktieren Sie uns bitte unter:',
+        contactText:
+          'Wenn Sie Fragen zu dieser Datenschutzerklärung oder Ihren Daten haben, kontaktieren Sie uns bitte unter:',
+      },
+      legalNotice: {
+        title: 'Impressum',
+        contact: 'Kontakt',
+        phone: 'Telefon',
+        email: 'E-Mail',
+        responsible: 'Verantwortlich für den Inhalt gemäß § 55 Abs. 2 RStV',
+        disclaimer: 'Haftungsausschluss',
+        disclaimerText:
+          'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.',
       },
     });
 
